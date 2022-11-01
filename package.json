@@ -72,7 +72,6 @@
     ]
   },
   "devDependencies": {
-    "husky": "^7.0.1",
     "rename-cli": "^6.2.1",
     "rimraf": "^3.0.2",
     "stylelint": "^13.13.1",
