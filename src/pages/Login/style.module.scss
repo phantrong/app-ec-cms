@@ -1,0 +1,157 @@
+.loginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-weight: 700;
+    background-image: url('../../assets/images/background-login.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .logo {
+        text-align: center;
+        padding: 4%;
+    }
+    .loginForm {
+        width: 45%;
+        min-height: calc(100vh - 50px);
+        border-radius: 20px;
+        padding: 0 4% 4% 4%;
+        border: 2px solid #7A6A56;
+         :global(.ant-card-body) {
+            padding: 0;
+            overflow: auto;
+            height: 100%;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 3%;
+            color: #3B3B3B;
+        }
+        .inputEmail,
+        .inputPassword {
+            border: 1px solid #D6D6D6;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 12px 10px;
+        }
+        .formEmail,
+        .formPassword {
+            display: block;
+        }
+        .forgotPassword {
+            text-align: right;
+            margin-bottom: 20px;
+            a {
+                color: #888888;
+                font-weight: 400;
+            }
+        }
+        .textSignUp {
+            p {
+                text-align: center;
+                font-weight: 500;
+                color: #3B3B3B;
+                a {
+                    font-weight: 700;
+                    color: #5E7AA9;
+                }
+            }
+        }
+        .buttonLogin {
+            border-radius: 10px;
+            color: white;
+            background-color: #7A6A56;
+            border-color: #7A6A56;
+            padding: 12px 0px;
+            height: auto;
+            font-weight: 700;
+        }
+    }
+    .rowEmail,
+    .rowEmailHasError {
+        position: relative;
+        display: block;
+        .messageLogin {
+            color: #ff4d4f;
+            position: absolute;
+            top: 80px;
+            font-weight: 400;
+        }
+    }
+    .rowEmailHasError {
+        margin-bottom: 48px;
+    }
+    .rowPassword,
+    .rowPasswordHasError {
+        position: relative;
+        display: block;
+        .messageLogin {
+            color: #ff4d4f;
+            position: absolute;
+            top: 80px;
+            font-weight: 400;
+        }
+    }
+    .rowPasswordHasError {
+        margin-bottom: 48px;
+    }
+     :global(.ant-form-item-explain-error) {
+        text-align: left;
+        font-weight: 400;
+    }
+     :global(.ant-form-item-label>label) {
+        color: #3B3B3B;
+    }
+     :global(.ant-form-item-label > label::after) {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .loginForm {
+        width: 50% !important;
+        padding: 10px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .loginContainer {
+        background-image: none;
+        align-items: flex-start;
+        .loginForm {
+            width: 90% !important;
+            margin: 0 !important;
+            border: none;
+            padding: 10px !important;
+        }
+        .messageLogin {
+            top: 90px !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .loginContainer {
+        background-image: none;
+        align-items: flex-start;
+        .loginForm {
+            width: 100% !important;
+            margin: 0 !important;
+            border: none;
+             :global {
+                .ant-card-body {
+                    padding: 10px !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .loginContainer {
+        .rowPasswordHasError {
+            margin-bottom: 72px;
+        }
+    }
+}

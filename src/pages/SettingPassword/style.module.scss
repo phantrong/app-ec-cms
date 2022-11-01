@@ -1,0 +1,293 @@
+.myPageSetting {
+    margin-left: 84px;
+    font-weight: 700;
+    position: relative;
+    .contentPageSetting {
+        .titlePage {
+            padding: 10px 30px;
+            h2 {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+        .rowPage {
+            margin: 20px 30px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            .tabMyPageSetting {
+                width: 100%;
+                display: flex;
+                box-shadow: inset 0px -0.5px 0px #D6D6D6;
+                .tab,
+                .tabNotification {
+                    font-size: 14px;
+                    color: #888888;
+                    font-weight: 400;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+                .tab {
+                    width: 150px;
+                }
+                .tabNotification {
+                    max-width: 150px;
+                    width: calc(100% - 300px);
+                }
+                .active {
+                    font-weight: 700;
+                    color: #7A6A56;
+                    box-shadow: inset 0px -2px 0px #7A6A56;
+                    cursor: default;
+                }
+            }
+            .contentPage {
+                padding: 20px 20px 0 20px;
+                min-height: calc(100vh - 200px);
+                .rowInput {
+                    margin-bottom: 20px;
+                    .messageBehind {
+                        .note {
+                            display: inline-block;
+                            font-weight: 400;
+                            font-size: 12px;
+                            color: #888888;
+                        }
+                        .messageError {
+                            display: inline-block;
+                            font-weight: 400;
+                            font-size: 12px;
+                            color: #ff4d4f;
+                        }
+                    }
+                    .formInput {
+                        width: 100%;
+                        margin-bottom: 0px;
+                        .input,
+                        .inputReadOnly {
+                            border: 1px solid #D6D6D6;
+                            box-sizing: border-box;
+                            border-radius: 10px;
+                            padding: 12px 10px;
+                            height: 45px;
+                        }
+                        .inputReadOnly {
+                            pointer-events: none;
+                            background: #DEDEDE;
+                        }
+                    }
+                }
+                .rowError {
+                    margin-bottom: 0px;
+                    .messageBehind {
+                        .note {
+                            display: none;
+                        }
+                    }
+                }
+                .btnSubmit {
+                    margin: 10px 0 10px 0;
+                    padding: 12px 80px;
+                    background-color: #7A6A56;
+                    border-color: #7A6A56;
+                    font-weight: 700;
+                    height: auto;
+                }
+                .switch {
+                    margin-top: 5px;
+                    width: 60px;
+                    height: 30px;
+                    border-radius: 36.5px !important;
+                     :global {
+                        .ant-switch-checked {
+                            .ant-switch-handle {
+                                left: calc(100% - 27.6px - 1.2px) !important;
+                            }
+                        }
+                        .ant-switch-handle {
+                            top: 1.2px;
+                            left: 1.2px;
+                            width: 27.6px;
+                            height: 27.6px;
+                            background: #FFFFFF;
+                            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+                            border-radius: 36.5px;
+                            &::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                 :global {
+                    .ant-switch-checked {
+                        background-color: #528F75;
+                        .ant-switch-handle {
+                            left: calc(100% - 27.6px - 1.2px) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+     :global {
+        .ant-form-item-explain-error {
+            text-align: left;
+            font-weight: 400;
+        }
+        button {
+            font-weight: 700;
+            border-radius: 10px;
+            color: white;
+        }
+    }
+}
+
+.modalSuccess {
+    width: 420px !important;
+     :global(.ant-modal-body) {
+        text-align: center;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 30px;
+        }
+        strong {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        button {
+            border-radius: 10px;
+            color: white;
+            background-color: #7a6a56;
+            border-color: #7a6a56;
+            padding: 12px;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            margin-top: 20px;
+            font-weight: 700;
+            &:hover {
+                -ms-transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+            }
+        }
+    }
+     :global(.ant-modal-content) {
+        border-radius: 15px;
+    }
+     :global(.ant-modal-header) {
+        border: none;
+        padding: 16px 25px 0px 25px;
+         :global(.ant-modal-title) {
+            font-weight: 700;
+        }
+    }
+}
+
+.modalYesNo {
+    width: 450px !important;
+     :global(.ant-modal-body) {
+        text-align: center;
+        padding: 30px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .emailImg {
+            width: 100px;
+            height: 100px;
+        }
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            strong {
+                margin: 40px 0 10px 0;
+            }
+        }
+        .button {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            .buttonCancel,
+            .buttonOk {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 16px;
+                border-radius: 10px;
+                height: 45px;
+                width: 40%;
+                font-weight: 700;
+                &:hover {
+                    -ms-transform: scale(1.05);
+                    -webkit-transform: scale(1.05);
+                    transform: scale(1.05);
+                }
+            }
+            .buttonOk {
+                background-color: #7A6A56;
+                border-color: #7A6A56;
+                color: white;
+            }
+            .buttonCancel {
+                background-color: white;
+                border-color: #7A6A56;
+                color: #7A6A56;
+            }
+        }
+    }
+     :global(.ant-modal-content) {
+        border-radius: 15px;
+        z-index: 1 !important;
+    }
+     :global(.ant-modal-footer) {
+        border: none;
+        padding: 0px 16px 30px 16px;
+        display: flex;
+        justify-content: space-around;
+         :global {
+            .ant-btn-default,
+            .ant-btn-primary {}
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .myPageSetting {
+        margin: 0 !important;
+        .contentPageSetting {
+            .titlePage {
+                padding: 10px 15px 24px 15px;
+            }
+            .rowPage {
+                margin: 0 15px 10px 15px;
+                .tabMyPageSetting {
+                    .tab {
+                        width: 120px;
+                    }
+                    .tabNotification {
+                        max-width: 120px;
+                        width: calc(100% - 240px);
+                    }
+                }
+                .contentPage {
+                    padding: 20px 10px 0 10px;
+                    min-height: calc(100vh - 350px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.wrapper {
+  background-color: #f6f6f6;
+  padding: 10px 30px 63px 104px;
+
+  .titleTurnover {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+
+  border-left: 1px solid #d6d6d6;
+  border-right: 1px solid #d6d6d6;
+
+  &:last-child {
+    border-bottom: 1px solid #d6d6d6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  &:nth-child(2) {
+    border-top: 1px solid #d6d6d6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .topContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .title {
+      font-weight: 700;
+    }
+
+    .topRightContainer {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+
+      .earningTitle {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .optionSelectDate {
+        width: 150px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .datePicker {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+
+    .datePickerItem {
+      width: 150px;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+
+      &:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .tableRevenue {
+    margin-top: 30px;
+  }
+
+  .skeleton {
+    width: 100%;
+    height: 421px;
+  }
+
+  // Dashboard
+  .equalWidthOrderTable {
+    white-space: nowrap;
+  }
+
+  .nameProductBestSalesWidth {
+    width: 30%;
+  }
+
+  .otherBestSalesWidth {
+    width: 20%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .equalWidthOrderTable {
+      min-width: 200px;
+    }
+  }
+}

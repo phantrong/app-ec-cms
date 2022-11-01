@@ -1,0 +1,88 @@
+{
+  "name": "reactjs-base",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.14",
+    "@types/js-cookie": "^2.2.6",
+    "@types/lodash": "^4.14.161",
+    "@types/node": "^14.11.2",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-slick": "^0.23.4",
+    "agora-rtc-sdk-ng": "^4.11.1",
+    "antd": "^4.6.6",
+    "axios": "^0.21.1",
+    "browser-image-compression": "^2.0.0",
+    "chart.js": "^3.7.1",
+    "classnames": "^2.2.6",
+    "heic2any": "^0.0.3",
+    "i18next": "^19.7.0",
+    "i18next-browser-languagedetector": "^6.0.1",
+    "js-cookie": "^2.2.1",
+    "lint-staged": "^10.4.0",
+    "lodash": "^4.17.20",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.1.2",
+    "query-string": "^7.0.0",
+    "react": "^16.13.1",
+    "react-chartjs-2": "^4.1.0",
+    "react-device-detect": "^1.17.0",
+    "react-dom": "^16.13.1",
+    "react-helmet-async": "^1.3.0",
+    "react-i18next": "^11.7.3",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-lazy-load-image-component": "^1.5.1",
+    "react-number-format": "^4.9.3",
+    "react-query": "^3.5.5",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "3.4.3",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
+    "socket.io-client": "^4.5.1",
+    "typescript": "^4.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build && rimraf dist && rename build dist && rename dist/index.html app.html",
+    "server": "node server/index.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "tslint": "tslint -c ./tslint.json src/**/*.{ts,tsx}",
+    "tslint/fix": "tslint --fix -c ./tslint.json src/**/*.{ts,tsx}",
+    "stylelint": "stylelint src/**/*.scss",
+    "stylelint/fix": "stylelint --fix src/**/*.scss",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "rename-cli": "^6.2.1",
+    "rimraf": "^3.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-scss": "^3.19.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
+    "tslint-plugin-prettier": "^2.3.0",
+    "tslint-react": "^5.0.0"
+  }
+}

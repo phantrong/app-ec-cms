@@ -1,0 +1,13 @@
+{
+  "common": {
+    "login": "Login",
+    "signUp": "Sign up",
+    "username": "Username",
+    "password": "Password",
+    "rememberMe": "Remember me"
+  },
+  "validate": {
+    "usernameRequired": "Username is required",
+    "passwordRequired": "Password is required"
+  }
+}

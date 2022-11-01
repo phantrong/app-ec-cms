@@ -1,0 +1,117 @@
+.upgradeShopRequestDetail {
+    margin-left: 84px;
+    position: relative;
+    .title {
+        padding: 10px 30px 0px 20px;
+        display: flex;
+        align-items: flex-start;
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img {
+                cursor: pointer;
+            }
+        }
+        .btnRow {
+            display: flex;
+            justify-content: flex-end;
+            .approveBtn,
+            .denyBtn {
+                font-weight: 700;
+                display: flex;
+                height: 36px;
+                align-items: center;
+                justify-content: center;
+                width: 25%;
+            }
+            .approveBtn {
+                margin-right: 20px;
+                background: #7A6A56;
+                border-color: #7A6A56;
+                color: white;
+            }
+            .denyBtn {
+                background: white;
+                border-color: #7A6A56;
+                color: #7A6A56;
+            }
+        }
+    }
+    .statusRow {
+        padding: 10px 30px 10px 20px;
+        display: flex;
+        justify-content: flex-end;
+        .statusBtn {
+            display: flex;
+            flex-direction: column;
+            .statusTitle {
+                font-weight: 700;
+            }
+            button {
+                background: #FFFFFF;
+                border: 1px solid #D6D6D6;
+                border-radius: 10px;
+                color: #3B3B3B;
+                font-weight: 400;
+            }
+        }
+        .showStatusBtn {
+            pointer-events: none !important;
+        }
+    }
+    .upgradeRequestForm {
+        width: 100%;
+        padding: 0px 30px 10px 20px;
+        .upgradeRequestCol {
+            background: #FFFFFF;
+            border: 0.5px solid #D6D6D6;
+            border-radius: 10px;
+        }
+        .shopForm,
+        .stripeForm {
+            padding: 20px 20px 0px 20px;
+            .formTitle {
+                color: #888888;
+                font-weight: 700;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            .formInfo {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                .content {
+                    font-weight: 700;
+                    max-width: 50%;
+                    word-break: break-all;
+                    .imageCard,
+                    .URLImage {
+                        border-radius: 10px;
+                        margin-bottom: 20px;
+                        width: 180px;
+                        height: 120px;
+                    }
+                }
+            }
+        }
+    }
+    button {
+        border-radius: 10px;
+        color: white;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .upgradeShopRequestDetail {
+        margin: 0;
+        .title,
+        .statusRow,
+        .upgradeRequestForm {
+            padding: 10px 15px 0px 15px;
+        }
+    }
+}

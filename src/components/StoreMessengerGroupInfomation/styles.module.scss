@@ -1,0 +1,118 @@
+.groupInfomation {
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: -0.5px 0px 0px #D6D6D6;
+    .backBoxChat {
+        margin-bottom: 24px;
+        .backLeft {
+            margin-right: 10px;
+        }
+        .textBackLeft {
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+    .rowInfomation {
+        .avt {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             :global(img) {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+             :global(strong) {
+                margin-top: 10px;
+                font-size: 16px;
+                color: #3B3B3B;
+            }
+        }
+        .info {
+            .text {
+                margin-top: 20px;
+                display: flex;
+                align-items: flex-start;
+                 :global(strong) {
+                    margin-left: 10px;
+                    font-size: 12px;
+                    color: #3B3B3B;
+                }
+            }
+        }
+        .viewStore {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btnView {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                color: white;
+                background-color: #7A6A56;
+                border-color: #7A6A56;
+                padding: 12px;
+                width: 100%;
+                height: 40px;
+                font-weight: 700;
+                 :global(img) {
+                    position: absolute;
+                    right: 0;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1366px){
+    .groupInfomation {
+        .rowInfomation {
+            .viewStore {
+                .btnView {
+                    width: 100% !important;
+                    height: auto;
+                    padding: 2px;
+                    white-space: pre-wrap;
+                    flex-direction: column;
+                    img {
+                        position: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .groupInfomation {
+        .rowInfomation {
+            .info {
+                .text {
+                    flex-direction: column;
+                    strong {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .storeInfomation {
+        background: #f6f6f6 !important;
+        padding: 10px 15px !important;
+        height: auto;
+        box-shadow: none;
+        .rowInfomation {
+            background: #FFFFFF;
+            box-shadow: -0.5px 0px 0px #D6D6D6;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    }
+}

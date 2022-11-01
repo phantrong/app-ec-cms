@@ -1,0 +1,11 @@
+.divImage {
+    .URLImage {
+        max-width: 750px;
+        max-height: 750px;
+        object-fit: cover;
+    }
+     :global(.ant-image) {
+        width: 100%;
+        text-align: center;
+    }
+}

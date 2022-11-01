@@ -1,0 +1,70 @@
+.ant-modal-mask {
+  background-color: $blackModalMask;
+}
+
+.ant-col-20 {
+  max-width: 100%;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #DE3486;
+  border-color: #ffffff;
+}
+
+.ant-radio-inner {
+  background-color: #707070;
+  border: 1px solid #707070;
+}
+
+.ant-radio-checked .ant-radio-inner::after{
+  background-color: #DE3486;
+}
+
+.ant-breadcrumb a {
+  color: $light-blue;
+}
+
+.ant-form-item {
+  margin-bottom: 20px;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  height: 40px;
+}
+
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item {
+  margin: auto;
+}
+
+.ant-pagination-options {
+  display: none;
+}
+
+.ant-select-dropdown {
+  z-index: 1;
+}
+
+.ant-message-custom-content, .ant-message-error {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .ant-col-18 {
+    max-width: calc(100% - 20px);
+    flex-basis: 100%;
+  }
+
+  .ant-col-20 {
+    flex-basis: 100%;
+  }
+
+  .ant-form-item-label > label {
+    height: 0px;
+    font-size: 12px;
+  }
+
+  .ant-form-item .ant-form-item-label {
+    padding-bottom: 0px;
+  }
+}

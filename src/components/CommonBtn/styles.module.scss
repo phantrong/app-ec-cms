@@ -1,0 +1,89 @@
+@import 'styles/scss/abstract/_variables.scss';
+
+.commonBtnAntd {
+  width: 100%;
+
+  button {
+    border-radius: 10px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      -ms-transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+
+      transform-origin: bottom;
+    }
+
+    .ant-click-animating-node {
+      display: none;
+    }
+  }
+
+  .iconLeft {
+    margin-right: 5px;
+  }
+
+  .typeAddStaffBtn {
+    background-color: #7a6a56;
+    color: #ffffff;
+    border: 1px solid #7a6a56;
+  }
+
+  .typeBtnNormalEarthBtn {
+    background-color: #7a6a56;
+    color: #ffffff;
+    border: 1px solid #7a6a56;
+  }
+
+  .typeAddToCartBtn {
+    background-color: #ffffff;
+    color: $bg-btn-add-to-cart;
+    border: 1px solid $bg-btn-add-to-cart;
+    font-weight: normal;
+  }
+
+  .typeBuyBtn {
+    background-color: $bg-btn-add-to-cart;
+    color: #ffffff;
+    border: 1px solid $bg-btn-add-to-cart;
+    font-weight: normal;
+  }
+
+  .disabled {
+    color: #ffffff;
+    background: #dedede;
+    border-color: #d9d9d9;
+    text-shadow: none;
+    box-shadow: none;
+
+    &:hover {
+      color: #ffffff;
+      background: #dedede;
+    }
+  }
+
+  .typeTransparentBg {
+    background-color: #ffffff;
+    color: #7a6a56;
+    border: 1px solid #7a6a56;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .commonBtnAntd {
+    button {
+      &:hover {
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+    }
+  }
+}

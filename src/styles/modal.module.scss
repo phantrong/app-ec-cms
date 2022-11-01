@@ -1,0 +1,160 @@
+@import 'styles/scss/abstract/_variables.scss';
+
+// Modal with form
+.normalFormModal {
+  .rowMultipleForm {
+    justify-content: space-between;
+  }
+
+  .verticalInputForm {
+    :global {
+      .ant-form-item-required {
+        flex-direction: row-reverse;
+        margin-left: -10px;
+
+        &::before {
+          margin-left: 5px;
+          color: $fire-color;
+        }
+      }
+
+      .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input {
+        border-color: $error;
+      }
+
+      .ant-form-item-explain-error {
+        color: $error;
+      }
+
+      // Custom
+      .ant-form-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        margin-bottom: 15px;
+      }
+    }
+
+    label {
+      font-weight: 700;
+    }
+
+    .onlyOneInputInRow {
+      :global {
+        .ant-form-item-control {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Error
+  :global {
+    .-item-explain {
+      margin-top: -14px;
+      color: $error;
+    }
+  }
+
+  .bottomSubmit {
+    :global {
+      .ant-form-item {
+        margin-bottom: 0;
+
+        button[type='submit'] {
+          padding: 12px 0;
+          background: $earth-color;
+          height: 45px;
+          border-radius: 10px;
+          font-weight: 700;
+          width: 100%;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 1px solid $earth-color;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.commonModal {
+  :global {
+    .ant-form-item-label {
+      padding: 0px;
+      color: #3b3b3b;
+      font-weight: 700;
+      font-size: 14px;
+
+      & > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+        content: '';
+      }
+      & > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+        display: inline-block;
+        margin-left: 4px;
+        color: #ff4d4f;
+        font-size: 14px;
+        font-family: SimSun, sans-serif;
+        line-height: 1;
+        content: '*';
+      }
+    }
+  }
+}
+
+.modalConfirmDelete {
+  width: 416px !important;
+  p {
+    font-weight: 700;
+    font-size: 16px;
+    color: #3b3b3b;
+    margin-bottom: 0;
+  }
+  :global(.ant-modal-body) {
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+  }
+  :global(.ant-modal-content) {
+    border-radius: 15px;
+  }
+  :global(.ant-modal-footer) {
+    border: none;
+    padding: 30px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: space-around;
+    :global {
+      .ant-btn-default,
+      .ant-btn-primary {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        height: 45px;
+        border-radius: 15px;
+        width: 100%;
+        font-weight: 700;
+        &:hover {
+          -ms-transform: scale(1.05);
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+      }
+      .ant-btn-primary {
+        background-color: #7a6a56;
+        border-color: #7a6a56;
+        color: white;
+        margin-left: 10px;
+      }
+      .ant-btn-default {
+        background-color: white;
+        border-color: #7a6a56;
+        color: #7a6a56;
+        margin-right: 10px;
+      }
+    }
+  }
+}

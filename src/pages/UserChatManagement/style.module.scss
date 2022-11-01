@@ -1,0 +1,20 @@
+.userChatManagement {
+  margin-left: 84px;
+  font-weight: 700;
+  position: relative;
+  .content {
+    height: calc(100vh - 65px);
+    .colListStore,
+    .colBoxChat,
+    .colDetailStore {
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .userChatManagement {
+    margin: 0 !important;
+    padding: 0px;
+  }
+}

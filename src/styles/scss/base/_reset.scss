@@ -1,0 +1,90 @@
+// @font-face {
+//   font-family: "KozGoPr6N";
+//   src: url("../../fonts/KozGo/KozGoPr6N-Bold.otf");
+//   font-weight: bold;
+// }
+
+// @font-face {
+//   font-family: "KozGoPr6N";
+//   src: url("../../fonts/KozGo/KozGoPr6N-Regular.otf");
+//   font-weight: 500;
+// }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 14px;
+  color: $black;
+  // font-family: "KozGoPr6N", Arial, Helvetica, sans-serif;
+}
+
+body > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0;
+  font-style: initial;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+}

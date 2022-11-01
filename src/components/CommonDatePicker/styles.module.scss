@@ -1,0 +1,21 @@
+.datePicker {
+  :global {
+    .ant-picker-clear {
+      right: 30px !important;
+      z-index: 10000;
+      @media (max-width: 768px) {
+        opacity: 1;
+      }
+    }
+
+    input {
+      width: 60%;
+      flex: none;
+    }
+
+    .ant-picker-suffix {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

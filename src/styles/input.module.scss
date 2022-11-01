@@ -1,0 +1,14 @@
+.datePicker {
+  width: 100%;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 5px 10px 6px 10px;
+}
+.inputSearch {
+  :global {
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid #d6d6d6;
+  }
+}

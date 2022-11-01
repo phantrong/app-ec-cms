@@ -1,0 +1,60 @@
+@import 'styles/scss/abstract/_variables.scss';
+
+// Style for antd input search normal
+.searchProductInputComponent {
+  position: relative;
+  width: 100%;
+  // filter: drop-shadow(0px 8px 30px rgba(24, 24, 24, 0.1));
+  border-radius: 10px !important;
+
+  input {
+    height: 36px;
+    border-radius: inherit;
+    padding-left: 40px !important;
+    border-color: transparent;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+    border: 1px solid #d6d6d6;
+    border-right: none;
+
+    &:focus,
+    &:hover {
+      border: 1px solid #d6d6d6;
+      border-right: none;
+      box-shadow: none !important;
+    }
+  }
+  &.searchHeader {
+    input {
+      height: 40px;
+    }
+  }
+
+  :global {
+    .ant-input-group-addon {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: #ffffff;
+      border-color: transparent;
+      cursor: pointer;
+      border: 1px solid #d9d9d9;
+      border-left: none;
+    }
+  }
+
+  .iconSearchNormal {
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 10px);
+    left: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &.search-header-product {
+    input {
+      height: 40px;
+    }
+  }
+}

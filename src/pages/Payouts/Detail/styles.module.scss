@@ -1,0 +1,63 @@
+.wrapper {
+  padding-left: 104px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+.btnBack {
+  display: inline-flex;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #3b3b3b;
+  img {
+    margin-right: 10px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.box {
+  background: #ffffff;
+  border: 0.5px solid #d6d6d6;
+  border-radius: 10px;
+  padding: 20px 10px;
+  .rowBox {
+    font-weight: 400;
+    font-size: 14px;
+    color: #3b3b3b;
+    :global {
+      .ant-col {
+        margin-top: 20px;
+        &:nth-child(2n) {
+          text-align: right;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .title {
+    margin-top: 0px !important;
+    font-weight: 700;
+    font-size: 16px;
+    color: #3b3b3b;
+  }
+}
+
+.bank {
+  margin-top: 20px;
+}
+
+.infoStore {
+  .rowBox {
+    :global {
+      .ant-col {
+        margin-top: 20px;
+        &:nth-child(2n) {
+          text-align: left;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}

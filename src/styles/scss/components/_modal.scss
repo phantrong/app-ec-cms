@@ -1,0 +1,30 @@
+.modal {
+
+  position: relative;
+}
+
+.modalUserLiveStream {
+  width: 540px !important;
+  position: relative;
+}
+
+.modal-body {
+  padding: 20px 30px 20px 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal {
+    width: calc(100% - 64px) !important;
+  }
+
+  .modal-body {
+    padding: 20px 15px 20px 15px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .modal {
+    min-width: calc(100% - 30px) !important;
+    margin-top: 30px;
+  }
+}

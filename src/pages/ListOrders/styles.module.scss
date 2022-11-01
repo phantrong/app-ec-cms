@@ -1,0 +1,180 @@
+.container {
+  padding: 10px 30px 10px 104px;
+
+  .topContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .nameTitle {
+      font-weight: bold;
+    }
+
+    .namePage {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .groupBtn {
+      display: flex;
+      gap: 10px;
+
+      .searchInputWrapper {
+        width: 200px;
+
+        @media screen and (max-width: 1024px) {
+          width: 165px;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 140px;
+        }
+      }
+
+      .selectWrapper,
+      .skeletonSelect {
+        width: 200px;
+        @media screen and (max-width: 1024px) {
+          width: 160px;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 135px;
+        }
+      }
+
+      .skeletonSelect {
+        border-radius: 10px;
+        height: 36px;
+      }
+
+      .dateWrapper {
+        display: flex;
+
+        .dateItem {
+          width: 160px;
+        }
+        .firstDate {
+          display: flex;
+          align-items: center;
+
+          .icon {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    width: 100%;
+
+    .filterItem {
+      width: 15%;
+
+      .status {
+        font-weight: 700;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .boxContent {
+    margin-top: 10px;
+
+    .statistical {
+      margin-bottom: 10px;
+      .part {
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+        border: 0.5px solid #d6d6d6;
+
+        .topStripe {
+          display: flex;
+          justify-content: space-between;
+          .name {
+            color: #888888;
+            font-weight: 700;
+          }
+        }
+        .currency {
+          font-size: 25px;
+          font-weight: 700;
+        }
+
+        .currencyStore {
+          color: #5e7aa9;
+        }
+
+        .currencyCommission {
+          color: #e2582a;
+        }
+      }
+    }
+
+    .multiLine {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      word-break: break-all;
+      white-space: pre-wrap;
+      min-width: 200px;
+    }
+
+    .iconTable {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    // Status btn
+    .waitConfirmBtn,
+    .waitForGoodBtn,
+    .shippingBtn,
+    .shippedBtn,
+    .cancelBtn {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 8px;
+      font-size: 14px;
+      border-radius: 150px;
+      width: 120px;
+      color: white;
+      pointer-events: none;
+    }
+    .waitConfirmBtn {
+      background-color: #7a6a56;
+      border-color: #7a6a56;
+    }
+    .waitForGoodBtn {
+      background-color: #5e7aa9;
+      border-color: #5e7aa9;
+    }
+    .shippingBtn {
+      background-color: #efc028;
+      border-color: #efc028;
+    }
+    .shippedBtn {
+      background-color: #528f75;
+      border-color: #528f75;
+    }
+    .cancelBtn {
+      background-color: #e2582a;
+      border-color: #e2582a;
+    }
+
+    .skeletonStatistical {
+      width: 100%;
+      height: 105px;
+      border-radius: 10px;
+    }
+  }
+}

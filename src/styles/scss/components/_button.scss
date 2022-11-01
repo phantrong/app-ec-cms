@@ -1,0 +1,92 @@
+.btn {
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.1s ease-in-out;
+  border: 0;
+  background-color: $light-purple;
+  color: $white;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+      
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $light-purple !important;
+    color: $white;
+  }
+
+  span {
+    font-size: 14px !important;
+  }
+}
+
+.btn-submit {
+  background-color: $light-purple !important;
+  color: $white !important;
+  width: 315px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $light-purple !important;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: #DEC0E6 !important;
+  }
+}
+
+.btn-disable {
+  background-color: #DEC0E6 !important;
+  color: $white !important;
+  width: 315px;
+  pointer-events: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #DEC0E6 !important;
+    color: $white;
+  }
+}
+
+.btn-cancel {
+  background-color: $whiteF8 !important;
+  color: $black6 !important;
+  border: 1px solid $blackC;
+  width: 315px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $whiteF8 !important;
+    color: $black6;
+    border: 1px solid $blackC;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .btn-submit, .btn-cancel, .btn-disable {
+    width: 100%;
+  }
+}
+
+.ul-btn {
+  height: 40px;
+  width: 140px;
+  border-radius: 4px;
+}
+
+.ul-btn-primary {
+  background-color: #2799E2 !important;
+  color: #ffffff !important;
+  margin: 0 10px;
+}
+
+.ul-btn-default {
+  border: 1px solid #2799E2 !important;
+  color: #2799E2 !important;
+}

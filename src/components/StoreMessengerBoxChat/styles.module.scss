@@ -1,0 +1,496 @@
+.boxMessenger {
+    height: 100%;
+    box-shadow: inset -0.5px 0px 0px #d6d6d6;
+    .rowBoxChat {
+        height: 100%;
+        .backgroundHello {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 10px 10px 10px;
+             :global(strong) {
+                color: #7a6a56;
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+        }
+        .colBoxChat {
+            .colStore {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                padding: 10px;
+                box-shadow: inset 0px -0.5px 0px #d6d6d6;
+                .infoStore {
+                    display: flex;
+                    align-items: center;
+                    pointer-events: none;
+                    .backLeft {
+                        margin-right: 10px;
+                        display: none;
+                    }
+                    .avatar,
+                     :global(.ant-image) {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+                     :global(strong) {
+                        color: #3B3B3B;
+                    }
+                }
+                .btnBooking {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 8px 30px;
+                    height: 40px;
+                    border-radius: 10px;
+                    border: 1px solid #7a6a56;
+                    color: #7a6a56;
+                    font-weight: 700;
+                     :global(img) {
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .colInput {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                padding: 10px;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                box-shadow: inset 0px 0.5px 0px #d6d6d6;
+                .inputMsg {
+                    background-color: #efefef;
+                    border-radius: 10px;
+                    padding: 10px 12px;
+                    height: 45px;
+                    margin-right: 5px;
+                    border: 1px solid #efefef !important;
+                    &:focus,
+                    &:hover {
+                        border: 1px solid #efefef !important;
+                        box-shadow: none !important;
+                    }
+                }
+                .btnSend {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                }
+            }
+            .boxChat {
+                width: 100%;
+                max-height: calc(100vh - 125px);
+                position: absolute;
+                bottom: 0;
+                .divInfiniteScroll {
+                    padding: 10px;
+                    height: calc(100vh - 125px);
+                    overflow: auto;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    .messageInfiniteScroll {
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+                    .loading {
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        position: absolute;
+                        top: 5px;
+                    }
+                }
+                .myMsg,
+                .storeMsg {
+                    flex-direction: column;
+                    .message,
+                    .deletedMsg {
+                        border-radius: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 10px;
+                        font-weight: 400;
+                        margin-bottom: 2px;
+                        word-break: break-word;
+                        word-wrap: break-word;
+                        white-space: pre-line;
+                    }
+                }
+                .myMsg {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    .myMessage {
+                        display: flex;
+                        align-items: center;
+                        max-width: 75%;
+                        .message {
+                            background: #5e7aa9;
+                            border-color: #5e7aa9;
+                            color: white;
+                        }
+                        .more {
+                            padding-right: 10px;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+                .storeMsg {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    .message {
+                        background: white;
+                        border-color: white;
+                        color: #3B3B3B;
+                        margin-left: 40px;
+                    }
+                    .deletedMsg {
+                        margin-left: 10px;
+                    }
+                }
+                .deletedMsg {
+                    border: 1px solid #c4c4c4;
+                    border-radius: 15px;
+                    color: #c4c4c4;
+                }
+                .time {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #888888;
+                    margin: 20px 0 10px 0;
+                }
+                .seen {
+                    display: flex;
+                    span {
+                        font-weight: 700;
+                        font-size: 10px;
+                        color: #c4c4c4;
+                    }
+                }
+                .nameStore {
+                    color: #3b3b3b;
+                    font-weight: 400;
+                    font-size: 12px;
+                    margin-left: 40px;
+                    margin-bottom: 5px;
+                }
+                .messageHasAvatar {
+                    display: flex;
+                    align-items: center;
+                    max-width: 75%;
+                    .divAvatar {
+                        min-width: 30px;
+                    }
+                    .avatarStore {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                    }
+                    .message {
+                        border-color: white;
+                        background: white;
+                        color: #3B3B3B;
+                        margin-left: 10px;
+                        border-radius: 15px;
+                        padding: 10px;
+                        font-weight: 400;
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+        }
+    }
+    .hidden {
+        display: none !important;
+    }
+}
+
+.modalYesNo {
+    width: 450px !important;
+     :global(.ant-modal-body) {
+        text-align: center;
+        padding: 30px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            .buttonCancel,
+            .buttonOk {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 16px;
+                border-radius: 10px;
+                height: 45px;
+                width: 40%;
+                font-weight: 700;
+                &:hover {
+                    -ms-transform: scale(1.05);
+                    -webkit-transform: scale(1.05);
+                    transform: scale(1.05);
+                }
+            }
+            .buttonOk {
+                background-color: #7a6a56;
+                border-color: #7a6a56;
+                color: white;
+            }
+            .buttonCancel {
+                background-color: white;
+                border-color: #7a6a56;
+                color: #7a6a56;
+            }
+        }
+    }
+     :global(.ant-modal-content) {
+        border-radius: 15px;
+        z-index: 1 !important;
+    }
+     :global(.ant-modal-footer) {
+        border: none;
+        padding: 0px 16px 30px 16px;
+        display: flex;
+        justify-content: space-around;
+         :global {
+            .ant-btn-default,
+            .ant-btn-primary {}
+        }
+    }
+}
+
+.userGroupModal {
+    width: 450px !important;
+     :global(.ant-modal-body) {
+        text-align: center;
+        padding: 20px 0px;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .list {
+            padding: 0px 20px;
+            width: 100%;
+            max-height: 60vh;
+            overflow-x: auto;
+            position: relative;
+            &:hover {
+                &::-webkit-scrollbar-thumb {
+                    visibility: visible;
+                }
+            }
+            &::-webkit-scrollbar {
+                width: 6px;
+                color: white;
+                background-color: #fff;
+            }
+            &::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px #f7f7f6;
+                border-radius: 150px;
+                background-color: #f7f7f6;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #c4c4c4;
+                border-radius: 10px;
+                border: 5px solid #c4c4c4;
+                visibility: hidden;
+            }
+            .divUser {
+                display: flex;
+                width: 100%;
+                justify-content: flex-start;
+                align-items: center;
+                border-bottom: 0.5px solid #d6d6d6;
+                padding: 10px 0px;
+                .avatar,
+                 :global(.ant-image) {
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                }
+                .userName {
+                    font-weight: 700;
+                    width: calc(100% - 62px);
+                    text-align: left;
+                    margin-left: 10px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .chatIcon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    height: 32px;
+                    width: 32px;
+                    background: #7a6a56;
+                    cursor: pointer;
+                }
+            }
+        }
+        .title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0px 20px;
+            .clearIcon {
+                background: #efefef;
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+                cursor: pointer;
+            }
+        }
+        .button {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            .buttonCancel,
+            .buttonOk {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 16px;
+                border-radius: 10px;
+                height: 45px;
+                width: 40%;
+                font-weight: 700;
+                &:hover {
+                    -ms-transform: scale(1.05);
+                    -webkit-transform: scale(1.05);
+                    transform: scale(1.05);
+                }
+            }
+            .buttonOk {
+                background-color: #7a6a56;
+                border-color: #7a6a56;
+                color: white;
+            }
+            .buttonCancel {
+                background-color: white;
+                border-color: #7a6a56;
+                color: #7a6a56;
+            }
+        }
+    }
+     :global(.ant-modal-content) {
+        border-radius: 15px;
+        z-index: 1 !important;
+    }
+     :global(.ant-modal-footer) {
+        border: none;
+        padding: 0px 16px 30px 16px;
+        display: flex;
+        justify-content: space-around;
+         :global {
+            .ant-btn-default,
+            .ant-btn-primary {}
+        }
+    }
+}
+
+.popoverDeleteMsg {
+    padding: 0;
+    z-index: 1 !important;
+     :global(.ant-popover) {
+        z-index: 1 !important;
+    }
+     :global(.ant-popover-content) {
+        border-radius: 15px;
+        z-index: 1 !important;
+    }
+     :global(.ant-popover-inner) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px !important;
+         :global(.ant-popover-inner-content) {
+            padding: 10px !important;
+            color: #3b3b3b;
+            font-weight: 400;
+            font-size: 14px;
+            background: #ffffff;
+            border: 0.5px solid #d6d6d6;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            white-space: nowrap;
+            border-radius: 15px;
+        }
+    }
+}
+
+.popoverMore {
+    padding: 0;
+    z-index: 1 !important;
+     :global(.ant-popover) {
+        z-index: 1 !important;
+    }
+     :global(.ant-popover-content) {
+        background: #f6f6f6;
+        z-index: 1 !important;
+    }
+     :global(.ant-popover-arrow) {
+        display: none;
+    }
+     :global(.ant-popover-inner) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         :global(.ant-popover-inner-content) {
+            padding: 5px;
+            cursor: pointer;
+        }
+        box-shadow: none;
+        background: #f6f6f6;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .colBoxChat {
+        .colStore {
+            .infoStore {
+                pointer-events: all !important;
+                .backLeft {
+                    display: inline !important;
+                }
+            }
+        }
+    }
+}

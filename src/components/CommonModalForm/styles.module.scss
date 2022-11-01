@@ -1,0 +1,31 @@
+@import 'styles/scss/abstract/_variables.scss';
+
+.commonModal {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px;
+
+      .ant-modal-header {
+        border-bottom: none;
+        border-radius: 10px;
+        padding: 20px 20px 11px 20px;
+
+        .ant-modal-close {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          right: 6px;
+        }
+
+        .ant-modal-title {
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+
+      .ant-modal-body {
+        padding: 20px;
+      }
+    }
+  }
+}

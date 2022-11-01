@@ -1,0 +1,220 @@
+.wrapper {
+  padding-left: 104px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+.head {
+  overflow: hidden;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  :global {
+    .ant-picker-clear {
+      right: 21px;
+      @media (max-width: 768px) {
+        opacity: 1;
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    display: block;
+  }
+
+  .title {
+    color: #3b3b3b;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 28px;
+  }
+  .label {
+    margin-top: 5px;
+    margin-bottom: 4px;
+    color: #3b3b3b;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .groupSearch {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    @media only screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+    }
+
+    .formInput {
+      margin: 0px 5px;
+      @media only screen and (max-width: 767px) {
+        margin: 0px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+      :global {
+        .ant-picker,
+        .ant-select-single {
+          width: 160px !important;
+        }
+        @media only screen and (max-width: 1024px) {
+          .ant-picker,
+          .ant-select-single,
+          .ant-input-group-compact {
+            width: 165px !important;
+          }
+          .ant-input-group-compact {
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+    .formInputType {
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+    .datePickerStart {
+      @media only screen and (min-width: 768px) and (max-width: 992px) {
+        margin-left: 40%;
+      }
+    }
+  }
+  .strDate {
+    margin-bottom: 7px;
+    color: #3b3b3b;
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+
+.tableWithList {
+  margin-top: 10px;
+
+  .status {
+    .upComping,
+    .success,
+    .failed {
+      width: 120px;
+      padding: 4px 16px;
+      text-align: center;
+      color: #ffffff;
+      border-radius: 150px;
+    }
+    .upComping {
+      background-color: #efc028;
+    }
+    .success {
+      background-color: #528f75;
+    }
+    .failed {
+      background-color: #e2582a;
+    }
+  }
+
+  .table {
+    overflow-y: auto;
+  }
+  .tableMain {
+    width: 100%;
+    min-width: 800px;
+
+    .tableRow {
+      display: flex;
+    }
+    .tableCell {
+      width: 30%;
+      padding-left: 5px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.85);
+    }
+    .tableCellId {
+      width: 80px;
+    }
+    .tableHeading {
+      font-weight: bold;
+    }
+    .tableHeading {
+      .tableRow {
+        .tableCell {
+          padding: 16px;
+          background-color: #fff;
+          border-top: 0.5px solid #d6d6d6;
+          border-bottom: 0.5px solid #d6d6d6;
+          font-weight: 700;
+          font-size: 14px;
+
+          &:first-child {
+            border-top-left-radius: 10px !important;
+            border-left: 0.5px solid #d6d6d6;
+            border-top: 0.5px solid #d6d6d6;
+          }
+          &:last-child {
+            border-top-right-radius: 10px !important;
+            border-right: 0.5px solid #d6d6d6;
+          }
+        }
+      }
+    }
+    .tableBody {
+      max-height: 678px;
+      overflow-y: auto;
+      border-bottom: 0.5px solid #d6d6d6;
+      border-bottom-left-radius: 10px !important;
+      border-bottom-right-radius: 10px !important;
+      border-left: 0.5px solid #d6d6d6;
+      border-right: 0.5px solid #d6d6d6;
+
+      .tableRow {
+        .tableCell {
+          padding: 16px;
+          border-bottom: 0.5px solid #d6d6d6;
+        }
+        &:last-child {
+          border-bottom: none;
+          .tableCell {
+            &:first-child {
+              border-bottom-left-radius: 10px !important;
+            }
+            &:last-child {
+              border-bottom-right-radius: 10px !important;
+            }
+          }
+        }
+        &:nth-child(2n + 1) {
+          .tableCell {
+            background-color: #fff;
+          }
+        }
+        &:last-child {
+          .tableCell {
+            border-bottom: none;
+          }
+        }
+      }
+      .tableCellFull,
+      .noData {
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+        font-size: 14px;
+        background-color: #fff;
+      }
+      .noData {
+        color: rgba(0, 0, 0, 0.25);
+      }
+    }
+    .tableCellDetail {
+      width: 10%;
+      img {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.skeletonCountStatus {
+  width: 160px;
+  height: 36px;
+  border-radius: 10px;
+}

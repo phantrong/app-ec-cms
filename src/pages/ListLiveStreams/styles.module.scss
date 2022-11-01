@@ -1,0 +1,87 @@
+.container {
+  padding: 10px 30px 10px 104px;
+
+  .topContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .nameTitle {
+      font-weight: bold;
+    }
+
+    .namePage {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .groupBtn {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      .searchInputWrapper {
+        width: 200px;
+      }
+
+      .selectWrapper,
+      .skeletonSelect {
+        width: 200px;
+      }
+
+      .skeletonSelect {
+        border-radius: 10px;
+        height: 36px;
+      }
+
+      .dateWrapper {
+        display: flex;
+
+        .dateItem {
+          width: 160px;
+        }
+        .firstDate {
+          display: flex;
+          align-items: center;
+
+          .icon {
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .filter {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    width: 100%;
+
+    .filterItem {
+      width: 15%;
+
+      .status {
+        font-weight: 700;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .boxContent {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 0.5px solid #d6d6d6;
+    margin-top: 10px;
+
+    .skeletonLive {
+      width: 100%;
+    }
+
+    .noData {
+      text-align: center;
+    }
+  }
+}

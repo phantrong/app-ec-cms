@@ -1,0 +1,60 @@
+stages:
+ - build
+ - deploy-stg
+ - deploy-product
+
+deploy-stg:
+  stage: deploy-stg
+  image: node:14
+  only:
+    - staging
+  before_script:
+    - apt-get update -y
+    - apt-get -y install rsync
+  script:
+    - apk add rsync && apk add openssh
+    - mkdir -p ~/.ssh
+    - ssh-keyscan -H "$DEPLOY_STAGING_HOSTNAME"  >> ~/.ssh/known_hosts
+    - echo "$STG_SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - echo "$TEST_ENV_STAGING" > .env
+    - chmod 600 ~/.ssh/id_rsa
+    - yarn install --ignore-engines
+    - yarn build
+    - ssh ubuntu@$DEPLOY_STAGING_HOSTNAME "sudo rm -rf /home/ubuntu/lcm-cms/build && sudo mkdir /home/ubuntu/lcm-cms/build"
+    - rsync -avzh -e "ssh -i ~/.ssh/id_rsa" --rsync-path="sudo rsync" dist/* ubuntu@$DEPLOY_STAGING_HOSTNAME:/home/ubuntu/lcm-cms/build
+    - ssh ubuntu@$DEPLOY_STAGING_HOSTNAME "cd /home/ubuntu/lcm-cms && sudo rm -rf dist && sudo mv build dist"
+
+deploy-test:
+  stage: build
+  image: node:14
+  only:
+    - develop
+  before_script:
+    - apt-get update -y
+    - apt-get -y install rsync
+  script:
+    - apk add rsync && apk add openssh
+    - mkdir -p ~/.ssh
+    - ssh-keyscan -H "$DEPLOY_TEST_HOSTNAME"  >> ~/.ssh/known_hosts
+    - echo "$DEV_KEY" > ~/.ssh/id_rsa
+    - echo "$TEST_ENV" > .env
+    - chmod 600 ~/.ssh/id_rsa
+    - yarn install --ignore-engines
+    - yarn build
+    - ssh ubuntu@$DEPLOY_TEST_HOSTNAME "mkdir -p /var/www/live_ecommerce/cms/dist"
+    - rsync -avzh -e "ssh -i ~/.ssh/id_rsa" --rsync-path="sudo rsync" dist/* ubuntu@$DEPLOY_TEST_HOSTNAME:/var/www/live_ecommerce/cms/dist
+
+deploy-product:
+  stage: deploy-product
+  image: node:14
+  tags:
+    - product-runner-cms
+  only:
+    - product
+  script:
+    - echo "$PRODUCT_ENV" > .env
+    - cp -r public src package.json yarn.lock tsconfig.json .env /home/ubuntu/lcm-cms
+    - cd /home/ubuntu/lcm-cms
+    - yarn install --ignore-engines
+    - yarn build
+    - cd /home/ubuntu && sh deploy_cms.sh

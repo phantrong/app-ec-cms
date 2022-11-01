@@ -1,0 +1,186 @@
+$sp: 768px;
+.boxLive {
+  display: flex;
+  flex-direction: column;
+
+  .imgLive {
+    position: relative;
+    .imgLiveBg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 1px solid #efefef;
+      min-height: 171px;
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media (max-width: 375px) {
+        min-height: 93px;
+        max-height: 93px;
+      }
+    }
+
+    .violation {
+      background-color: #c4c4c4;
+      min-height: 171px;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding: 56.25% 0 0;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        object-fit: cover;
+        height: 90px;
+        width: 50%;
+        height: 50%;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .boxLiveBottom {
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+
+    :global {
+      .ant-image {
+        width: auto;
+      }
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media (max-width: $sp) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .boxLiveBottomRight {
+      margin-left: 5px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .title {
+        flex: 1;
+        font-size: 16px;
+        color: #3b3b3b;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+        white-space: pre-wrap;
+        font-weight: 700;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .nameTime {
+        font-size: 14px;
+        color: #888888;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .streamedDownload {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      @media (max-width: $sp) {
+        margin-left: 5px;
+        .title {
+          font-size: 12px;
+        }
+
+        .nameTime {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+.liveFlag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  :global {
+    .ant-badge-multiple-words {
+      border-radius: 5px;
+      height: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: none;
+      font-size: 10px;
+      font-weight: bold;
+      background-color: #3b3b3b;
+      line-height: 14px;
+      background-color: #e2582a;
+    }
+  }
+
+  @media (max-width: $sp) {
+    top: 4px;
+    left: 5px;
+  }
+}
+
+// Rectangle live box img
+.rectangleImg {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 56.25% 0 0;
+  overflow: hidden;
+
+  :global {
+    .ant-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 171px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 768px) {
+        max-height: 165px;
+        min-height: 165px;
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.commonTable {
+  table {
+    background-color: #f6f6f6;
+  }
+  table thead tr:first-child th:first-child {
+    border-top-left-radius: 10px !important;
+    border-left: 0.5px solid #d6d6d6;
+    border-top: 0.5px solid #d6d6d6;
+  }
+  table thead tr:first-child th:last-child {
+    border-top-right-radius: 10px !important;
+    border-right: 0.5px solid #d6d6d6;
+  }
+  table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px !important;
+  }
+  table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px !important;
+  }
+
+  table {
+    tr {
+      &:nth-child(even),
+      th {
+        background-color: #ffffff;
+      }
+
+      th {
+        background-color: #ffffff;
+        border-top: 0.5px solid #d6d6d6;
+        border-bottom: 0.5px solid #d6d6d6;
+        font-weight: 700;
+        font-size: 14px;
+        white-space: nowrap;
+        color: #3b3b3b;
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          border-bottom: 0.5px solid #d6d6d6;
+          color: #3b3b3b;
+
+          &:last-child {
+            border-right: 0.5px solid #d6d6d6;
+          }
+
+          &:first-child {
+            border-left: 0.5px solid #d6d6d6;
+          }
+        }
+
+        &:last-child {
+          td {
+            border-bottom: 0.5px solid #d6d6d6;
+          }
+        }
+      }
+    }
+  }
+
+  .icon {
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  :global {
+    .ant-table-cell {
+      &::before {
+        content: none !important;
+      }
+    }
+  }
+}
+
+.commonPagination {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  :global(.ant-pagination) {
+    text-align: right;
+    display: flex;
+
+    :global(button),
+    :global(li) {
+      border-color: #d6d6d6;
+      border-radius: 10px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    :global(button:not([disabled])) {
+      border-radius: 10px !important;
+      color: black;
+    }
+    :global(li:hover),
+    :global(.ant-pagination-item-active) {
+      background-color: #7a6a56;
+      border-color: #7a6a56;
+      a {
+        color: white !important;
+      }
+    }
+    :global(li a:hover),
+    :global(.ant-pagination-item-active a) {
+      color: white;
+    }
+    :global(button:hover:not([disabled])) {
+      background-color: #7a6a56;
+      border-color: #7a6a56;
+      color: white !important;
+      border-radius: 10px !important;
+    }
+
+    :global {
+      .ant-pagination-options {
+        display: none;
+      }
+    }
+  }
+}

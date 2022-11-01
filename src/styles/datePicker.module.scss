@@ -1,0 +1,52 @@
+.datePicker {
+  :global {
+    .ant-picker-clear {
+      right: 30px !important;
+      z-index: 10000;
+      @media (max-width: 768px) {
+        opacity: 1;
+      }
+    }
+
+    input {
+      width: 60%;
+      flex: none;
+    }
+
+    .ant-picker-suffix {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: none !important;
+    border-color: #d6d6d6;
+  }
+
+  width: 100%;
+  border: 1px solid #d6d6d6;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 12px 10px;
+  height: 36px;
+}
+
+.popupDate {
+  :global {
+    // Date picker
+    .ant-picker-now,
+    .ant-picker-ok {
+      display: none !important;
+    }
+
+    .ant-picker-footer {
+      border-top: 0;
+    }
+  }
+
+  ul {
+    padding: 0;
+  }
+}

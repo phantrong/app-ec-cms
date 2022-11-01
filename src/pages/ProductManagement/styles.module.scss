@@ -1,0 +1,244 @@
+@import 'styles/scss/abstract/_variables.scss';
+
+.row {
+  padding-left: 104px;
+  padding-right: 30px;
+  padding-top: 10px;
+  //************************CSS HEADER******************
+  .rowHeader {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .button {
+      :global {
+        .ant-btn-primary {
+          background: #7a6a56;
+          border: none;
+        }
+      }
+      button {
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 8px 10px;
+        font-size: 14px;
+        font-weight: 700;
+        transition: 0.4s;
+
+        &:hover {
+          -ms-transform: scale(1.05);
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  //************************CSS Body****************
+  .rowBody {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+
+    // Search input
+    .searchInputWrapper {
+      width: 200px;
+      margin-right: 20px;
+
+      .nameTitle {
+        font-weight: bold;
+        color: #3b3b3b;
+      }
+    }
+
+    // Select
+    .selectWrapper {
+      margin-right: 20px;
+      width: 160px;
+
+      .selectTitle {
+        font-weight: 700;
+        color: #3b3b3b;
+      }
+    }
+
+    // Price
+    .price {
+      .priceTitle {
+        font-weight: 700;
+        color: #3b3b3b;
+      }
+
+      .priceGroup {
+        display: flex;
+        align-items: center;
+        .priceInput {
+          height: 36px;
+          width: 160px;
+        }
+
+        .space {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 5px;
+        }
+      }
+
+      .errorPrice {
+        color: #e2582a;
+        margin-bottom: 0;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .table {
+    .photoProduct {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .configType {
+      &:first-child {
+        &::after {
+          content: ' - ';
+        }
+      }
+    }
+
+    .multiRows {
+      margin: -15px 0;
+
+      .itemMultiRows {
+        margin: 15px 0;
+        white-space: nowrap;
+      }
+    }
+
+    :global {
+      .ant-table-cell {
+        word-break: break-word;
+        position: relative;
+        padding: 25px;
+        vertical-align: top;
+      }
+    }
+
+    .inventory,
+    .hiddenProduct,
+    .soldOut,
+    .violation {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 8px;
+      font-size: 14px;
+      border-radius: 150px;
+      width: 120px;
+      color: $white;
+    }
+
+    .inventory {
+      background-color: #5e7aa9;
+      border-color: #5e7aa9;
+    }
+
+    .hiddenProduct {
+      background-color: #efc028;
+      border-color: #efc028;
+    }
+
+    .soldOut {
+      background-color: #528f75;
+      border-color: #528f75;
+    }
+
+    .violation {
+      background-color: #e2582a;
+      border-color: #e2582a;
+    }
+
+    .actionRow {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      img {
+        &:last-child {
+          margin-left: 15px;
+        }
+      }
+
+      button {
+        height: 30px;
+      }
+    }
+
+    .rowIcon {
+      width: 15%;
+      vertical-align: top;
+    }
+
+    .multiColumn {
+      position: absolute;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      word-break: break-all;
+      white-space: pre-wrap;
+    }
+
+    .multiColumn,
+    .multiColumnPhoto {
+      top: 22px;
+    }
+
+    .longContent {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      word-break: break-all;
+      white-space: pre-wrap;
+      min-width: 250px;
+      max-width: 250px;
+    }
+  }
+  //*************CSS FOOTER ************************
+  .pagination {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .skeletonSelect {
+    border-radius: 10px;
+    height: 36px;
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .row {
+    .rowBody {
+      .selectWrapper {
+        margin-right: 0;
+      }
+    }
+  }
+}

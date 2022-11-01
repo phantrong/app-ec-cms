@@ -1,0 +1,46 @@
+.linkProduct {
+    color: unset;
+    &:hover {
+        color: unset;
+    }
+    .msgLink {
+        display: flex;
+        .img,
+         :global(.ant-image) {
+            border-radius: 10px !important;
+            width: 80px !important;
+            height: 80px !important;
+            margin-right: 10px;
+        }
+        .infoProduct {
+            display: flex;
+            flex-direction: column;
+            .category {
+                font-weight: 400;
+                font-size: 12px;
+            }
+            .name {
+                font-weight: 700;
+                font-size: 12px;
+            }
+            .price {
+                word-break: break-all;
+                .paymentPrice {
+                    color: #E2582A;
+                    font-weight: 700;
+                    font-size: 20px;
+                    word-break: break-all;
+                }
+                .crossPrice {
+                    text-decoration-line: line-through;
+                    color: #888888;
+                    word-break: break-all;
+                    font-size: 14px;
+                }
+                .paddingRight5px {
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
