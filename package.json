@@ -48,15 +48,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build && rimraf dist && rename build dist && rename dist/index.html app.html",
-    "server": "node server/index.js",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "tslint": "tslint -c ./tslint.json src/**/*.{ts,tsx}",
     "tslint/fix": "tslint --fix -c ./tslint.json src/**/*.{ts,tsx}",
     "stylelint": "stylelint src/**/*.scss",
-    "stylelint/fix": "stylelint --fix src/**/*.scss",
-    "prepare": "husky install"
+    "stylelint/fix": "stylelint --fix src/**/*.scss"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -83,6 +81,10 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-standard": "^9.0.0",
     "tslint-plugin-prettier": "^2.3.0",
-    "tslint-react": "^5.0.0"
+    "tslint-react": "^5.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
