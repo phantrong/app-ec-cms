@@ -1,13 +1,598 @@
 {
-  "common": {
-    "login": "Đăng nhập",
-    "signUp": "Đăng ký",
-    "username": "Tài khoản",
-    "password": "Mật khẩu",
-    "rememberMe": "Nhớ tài khoản"
+ "common": {
+   "btnOk":"vâng",
+   "btnCancel":"Không",
+   "confirmLogOut":"Đăng xuất.",
+   "isThatOkToLogOut":"Bạn có chắc không?",
+   "confirm":"Xác nhận",
+   "cancel":"hủy bỏ",
+   "others":"những người khác",
+   "gender": {
+     "male":"nam",
+     "female":"phụ nữ",
+     "other":"khác"
+    },
+   "identityVerificationTypeText": {
+     "passpost":"Hộ chiếu Nhật Bản",
+     "driverLicense":"bằng lái xe",
+     "ResidenceCard":"thẻ cư trú / giấy chứng nhận thường trú nhân đặc biệt",
+     "numberCard":"Thẻ số của tôi",
+     "ResidenceCertificate":"giấy chứng nhận cư trú",
+     "other":"khác"
+    },
+   "status":"trạng thái",
+   "pagination":"Hiển thị {{ page_from }} đến {{ page_to }} trong tổng số {{total }}",
+   "search":"tìm kiếm",
+   "noDataSearch":"Không có kết quả tìm kiếm.",
+   "all":"tất cả",
+   "ok":"vâng",
+   "year":"năm",
+   "month":"tháng",
+   "day":"day",
+   "fileExport":"Xuất tệp",
+   "age":"tuổi",
+   "stt":"số",
+   "dateStart":"ngày bắt đầu",
+   "dateEnd":"ngày kết thúc",
+   "statusAll":"Tất cả",
+   "txtBack":"Yamauchi Hirai",
+   "live":"sống",
+   "hour":"giờ trước",
+   "minutes":"phút",
+   "delete":"xóa",
+   "second":"thứ hai",
+   "before":"trước",
+   "justNow":"vài giây",
+   "stop":"dừng lại",
+   "beforeHour":"beforeHour"
   },
-  "validate": {
-    "usernameRequired": "Vui lòng nhập tài khoản",
-    "passwordRequired": "Vui lòng nhập mật khẩu"
+ "dayOfWeek": {
+   "su":"Chủ nhật",
+   "mo":"Thứ 2",
+   "tu":"Thứ 3",
+   "we":"Thứ 4",
+   "th":"Thứ 5",
+   "fr":"Thứ 6",
+   "sa":"Thứ 7"
+  },
+ "sideNav": {
+   "menu":"menu"
+  },
+ "tabTitle": {
+   "login":"FESLIAISON ｜ Đăng nhập",
+   "listCategory":"FESLIAISON ｜ Quản lý danh mục",
+   "listBrand":"FESLIAISON ｜ Sửa đổi danh mục",
+   "listUpgradeShopRequest":"FES LIAISON ｜ Yêu cầu nâng cấp",
+   "liftShopRequestDetail":"FES LIAISON ｜ Chi tiết biểu mẫu nâng cấp",
+   "listProduct":"FES LIAISON ｜ Quản lý sản phẩm",
+   "payoutHistory":"FES LIAISON ｜ Quản lý thanh toán",
+   "userChatManagement":"FESLIAISON ｜ Thông tin người dùng / danh sách tin nhắn",
+   "storeChatManagement":"FESLIAISON ｜ Thông tin Người dùng / Danh sách Tin nhắn",
+   "orderDetail":"FES LIAISON ｜ Chi tiết thanh toán",
+   "myPageSetting":"FES LIAISON ｜ Setting",
+   "userManagement":"FES LIAISON | Quản lý người dùng",
+   "userDetail":"FES LIAISON ｜ Thông tin người dùng",
+   "liveStream":"FES LIAISON | Quản lý luồng trực tiếp",
+   "ListLiveStream":"FES LIAISON | Quản lý luồng trực tiếp",
+   "forgotPassword":"FES LIAISON ｜ Quên mật khẩu",
+   "turnover":"FES LIAISON ｜ Quản lý thu nhập",
+   "storeManagement":"FES LIAISON ｜ Thông tin cửa hàng",
+   "storeDetail":"FES LIAISON ｜ Thông tin cửa hàng",
+   "listOrders":"FES LIAISON ｜ Quản lý đơn hàng"
+  },
+ "validate": {
+   "over3000Characters":"* Vui lòng nhập ít hơn 3000 ký tự.",
+   "plsSetAFee":"* Vui lòng đặt mức phí.",
+   "enterValueFrom0To100":"* Vui lòng nhập giá trị từ 0 đến 100.",
+   "enterValidPrice":"* Vui lòng nhập phạm vi giá chính xác.",
+   "startDateBeforeEndDate":"Kiểm tra xem ngày kết thúc có sau ngày bắt đầu hay không."
+  },
+ "login": {
+   "title":"đăng nhập",
+   "email":"email",
+   "password":"mật khẩu",
+   "forgetPassword":"Nhấp vào đây để biết cách quên mật khẩu của bạn",
+   "textSignUp":"Để đăng ký thành viên mới",
+   "here":"đây",
+   "validate": {
+     "emailRequired":"* Vui lòng nhập địa chỉ email của bạn.",
+     "passwordRequired":"* Vui lòng nhập mật khẩu của bạn."
+    },
+   "messageResponse": {
+     "errorEmailOrPassword":"* Địa chỉ email hoặc mật khẩu không chính xác. Vui lòng kiểm tra xem chúng đã được nhập đúng chưa."
+    }
+  },
+ "header": {
+   "profile":"trang của tôi",
+   "logout":"đăng xuất"
+  },
+ "listCategory": {
+   "title":"Danh mục",
+   "pagination":"Hiển thị {{ page_from }} đến {{ page_to }} trong tổng số {{total }}",
+   "noData":"Không tìm thấy kết quả tìm kiếm nào.",
+   "errorSelectDate":"* Kiểm tra xem ngày hoàn thành có sau ngày bắt đầu hay không.",
+   "btnAddCategory":"Thêm danh mục",
+   "successDelete":"Danh mục này đã bị xóa.",
+   "verifyDelete":"Bạn có chắc chắn muốn xóa danh mục này không?",
+   "bảng": {
+     "id":"số",
+     "image":"ảnh",
+     "name":"danh mục lớn",
+     "createdDate":"ngày tạo",
+     "totalBrand":"Số lượng danh mục phụ"
+    },
+   "bộ lọc": {
+     "nameSearch":"Tìm kiếm",
+     "dateStart":"ngày bắt đầu",
+     "dateEnd":"ngày kết thúc"
+    },
+   "modalErrorDelete": {
+     "content1":"Danh mục này đang được sử dụng.",
+     "content2":"Không thể xóa."
+    },
+   "modalAddCategory": {
+     "title":"Thêm danh mục",
+     "image":"danh mục ảnh",
+     "name":"tên danh mục",
+     "btnSubmit":"Thêm",
+     "selectFile":"Chọn tệp",
+     "clickToSelect":"Nhấp để chọn",
+     "success":"Đã thêm danh mục mới.",
+     "xác thực": {
+       "imageRequired":"* Vui lòng tải ảnh lên cho danh mục.",
+       "imageType":"* Các định dạng tệp có thể được tải lên là JPG / JPEG / PNG / HEIC / JFIFMore Chỉ có.",
+       "imageSize":"* Vui lòng tải lên ảnh không lớn hơn 10MB .",
+       "nameRequired":"* Vui lòng nhập tên danh mục.",
+       "nameRegex":"* Định dạng sai. Chữ hiragana 2 byte, kanji, katakana 2 byte và Vui lòng nhập bằng cách sử dụng các ký tự và ký hiệu chữ và số nửa chiều rộng.",
+       "nameLen":"* 20 ký tự Vui lòng nhập bên dưới.",
+       "nameUnique":"* Tên danh mục này đã tồn tại."
+      }
+    },
+   "modalUpdateCategory": {
+     "title":"Sửa đổi danh mục",
+     "btnSubmit":"sửa chữa",
+     "success":"Bạn đã sửa thể loại này."
+    }
+  },
+ "listBrand": {
+   "pagination":"Hiển thị {{ page_from }} đến {{ page_to }} trong tổng số {{total }}",
+   "btnAdd":"Thêm danh mục phụ",
+   "bảng": {
+     "id":"số",
+     "name":"Hạng mục nhỏ",
+     "createdDate":"ngày tạo"
+    },
+   "modalAddBrand": {
+     "title":"Thêm danh mục phụ",
+     "name":"Tên danh mục phụ",
+     "btnSubmit":"Thêm",
+     "thành công":"Đã thêm một danh mục phụ.",
+     "xác thực": {
+       "nameRequired":"* Vui lòng nhập tên danh mục phụ.",
+       "nameRegex":"* Định dạng sai. Chữ hiragana 2 byte, kanji, katakana 2 byte và Vui lòng nhập bằng cách sử dụng các ký tự và ký hiệu chữ và số nửa chiều rộng.",
+       "nameLen":"* 20 ký tự Vui lòng nhập bên dưới.",
+       "nameUnique":"* Tên danh mục này đã tồn tại."
+      }
+    },
+   "modalUpdateBrand": {
+     "title":"Sửa đổi danh mục phụ",
+     "btnSubmit":"sửa chữa",
+     "thành công":"Các danh mục con đã sửa."
+    }
+  },
+ "listUpgradeShopRequest": {
+   "title":"Danh sách những người đăng ký mở cửa hàng",
+   "pagination":"Hiển thị {{ page_from }} đến {{ page_to }} trong tổng số {{total }}",
+   "filterStatus":"Trạng thái",
+   "bảng": {
+     "id":"số",
+     "name":"Tên",
+     "email":"địa chỉ email",
+     "phone":"số điện thoại",
+     "status":"trạng thái"
+    },
+   "requestStatus": {
+     "all":"tất cả",
+     "waitApprove":"Đang chờ phê duyệt",
+     "đã phê duyệt":"đã phê duyệt",
+     "từ chối":"bị từ chối",
+     "waitStripe":"Đang chờ xử lý Stripe",
+     "failStripe":"Xử lý sọc không thành công"
+    }
+  },
+ "upgradeShopRequestDetail": {
+   "title":"Chi tiết về ứng dụng cửa hàng",
+   "BrowseBtn":"Chấp thuận",
+   "allowBtn":"Từ chối",
+   "status":"trạng thái",
+   "confirmApprove":"Bạn có chắc chắn muốn phê duyệt không?",
+   "successApproveMessage":"Được chấp thuận.",
+   "successDenyMessage":"Bị từ chối.",
+   "stripeErrorApproveMessage":"Không thể phê duyệt ứng dụng bị đình trệ này vì không thể liên kết với Stripe .",
+   "okDeny":"từ chối",
+   "verifyDeny":"Bạn có chắc chắn muốn từ chối không?",
+   "shopForm": {
+     "title":"thông tin cửa hàng",
+     "companyName":"tên công ty",
+     "shopName":"tên cửa hàng (tên cửa hàng)",
+     "address":"địa chỉ",
+     "phone":"số điện thoại",
+     "fax":"số fax",
+     "url":"trang cá nhân",
+     "description":"Giới thiệu về cửa hàng"
+    },
+   "stripeForm": {
+     "title":"thông tin người phụ trách ( để tạo tài khoản được liên kết với Stripe ) ( để tạo tài khoản được liên kết với Stripe )",
+     "name":"tên người phụ trách",
+     "nameFurigana":"Tên người phụ trách (furigana)",
+     "giới tính":"giới tính",
+     "birthday":"ngày sinh",
+     "phone":"số điện thoại",
+     "position":"vị trí",
+     "address":"địa chỉ",
+     "cardType":"chọn loại tài liệu",
+     "cardImage":"tài liệu xác nhận danh tính"
+    },
+   "ngân hàng": {
+     "titleBank":"Thông tin Tài khoản Ngân hàng",
+     "bankName":"tên ngân hàng",
+     "bankBranchName":"Tên chi nhánh",
+     "accountIdentification":"Nhận dạng tài khoản",
+     "accountNumber":"số tài khoản",
+     "accountHolder":"chủ tài khoản"
+    }
+  },
+ "listProduct": {
+   "title":"Quản lý sản phẩm",
+   "addProduct":"Thêm Sản phẩm",
+   "searchProduct": {
+     "keyword":"tìm kiếm theo tên sản phẩm",
+     "price":"giá",
+     "lowPrice":"giá thấp nhất",
+     "highPrice":"giá cao nhất"
+    },
+   "trạng thái": {
+     "title":"Trạng thái",
+     "all":"tất cả",
+     "kho":"khoảng không quảng cáo",
+     "noProduct":"sản phẩm ẩn",
+     "sellOut":"đã bán hết",
+     "vi phạm":"vi phạm",
+     "inStock":"Còn hàng",
+     "waitConfirm":"Đang xác nhận"
+    },
+   "bảng": {
+     "index":"item",
+     "ảnh":"ảnh",
+     "productName":"tên sản phẩm",
+     "productDetail":"sự khác biệt của sản phẩm",
+     "storeName":"tên cửa hàng",
+     "unitPrice":"đơn giá",
+     "numberInventory":"số lượng / hàng tồn kho",
+     "salesNoCouponApplied":"Tổng số",
+     "noTypeConfig":"không nhạy cảm"
+    },
+   "report":"báo cáo vi phạm",
+   "msgToSeller":"thông báo cho người bán",
+   "plsInsertReasons":"Vui lòng nhập lý do!",
+   "doingReport":"Báo cáo",
+   "doYouWannaDeleteViolation":"Bạn có chắc chắn muốn xóa vi phạm này không?",
+   "sentMsgToSeller":"Đã gửi tin nhắn cho người bán.",
+   "celMark":"Báo cáo vi phạm đã bị hủy bỏ.",
+   "lineNotShow1":"Nếu sản phẩm bị quản trị viên đánh giá là vi phạm",
+   "lineNotShow2":"Không thể hiển thị thông tin sản phẩm.",
+   "removeViolation":"Xóa Vi phạm"
+  },
+ "C2001DashBoard": {
+   "doanh thu":"quản lý thu nhập",
+   "title":"Quản lý Bán hàng",
+   "kiếm":"Bán hàng",
+   "startTimeBiggerThanEndTime":"* Kiểm tra xem ngày hoàn thành có sau ngày bắt đầu hay không.",
+   "period":"kỳ",
+   "numberOfPurchase":"số lần mua (number)",
+   "nam":"nam",
+   "nữ":"phụ nữ",
+   "chưa biết":"chưa biết (thành viên)",
+   "knownNonMember":"không xác định (không phải thành viên)",
+   "totalPurchase":"Tổng tiền mua ( yên )",
+   "buyA Average":"Trung bình Mua ( Yên )",
+   "staticsByAge":"Theo độ tuổi",
+   "age":"tuổi",
+   "staticsByProduct":"tổng hợp theo sản phẩm",
+   "productName":"tên sản phẩm",
+   "numberPieces":"số lượng (miếng)",
+   "amountYen":"số tiền (yên)",
+   "selectMonthValid":"* Kiểm tra xem tháng hoàn thành có sau tháng bắt đầu hay không.",
+   "selectYearValid":"* Kiểm tra xem năm hoàn thành có sau năm bắt đầu hay không.",
+   "over30days":"* Vui lòng chọn 30 ngày trở xuống từ ngày bắt đầu đến ngày hoàn thành .",
+   "fileNameExcelOrder":"Quản lý Bán hàng",
+   "fileNameExcelBestSales":"Tóm tắt theo sản phẩm",
+   "fileNameExcelAge":"Tổng số theo độ tuổi",
+   "số lượng":"số tiền",
+   "totalPurchaseTooltip":"Tổng số lần mua",
+   "totalOrders":"Số lần mua (số)"
+  },
+ "C2010UserManagement": {
+   "title":"Quản lý người dùng",
+   "userName":"tên người dùng",
+   "mailAddress":"địa chỉ email",
+   "phone":"số điện thoại",
+   "addRess":"Địa chỉ",
+   "createdAt":"ngày tạo tài khoản",
+   "startDateBeforeEndDate":"Đảm bảo ngày kết thúc sau ngày bắt đầu.",
+   "dateStart":"ngày bắt đầu",
+   "dateEnd":"ngày kết thúc"
+  },
+ "C2011DetailUser": {
+   "title":"thông tin người dùng",
+   "personalInfo":"thông tin cá nhân"
+  },
+ "C3004StoreManagement": {
+   "title":"Quản lý cửa hàng",
+   "storeName":"tên cửa hàng",
+   "mailAddress":"địa chỉ email",
+   "phone":"số điện thoại",
+   "addRess":"Địa chỉ cửa hàng",
+   "createdAt":"ngày tạo tài khoản",
+   "doanh thu":"Tổng doanh thu"
+  },
+ "C3005StoreDetail": {
+   "title":"Chi tiết cửa hàng",
+   "personalInfo":"lưu trữ thông tin",
+   "thu nhập":"thu nhập",
+   "toWithDraw":"Đến màn hình quản lý rút tiền",
+   "totalIncome":"Tổng thu nhập",
+   "hoa hồng":"hoa hồng",
+   "factInCome":"Số tiền thực tế đã nhận được",
+   "numberOfItems":"số lượng mặt hàng",
+   "totalOrdersQuantity":"Tổng số lượng đặt hàng",
+   "orderSummary":"Tóm tắt đơn hàng",
+   "seeMore":"xem thêm",
+   "live":"luồng trực tiếp",
+   "liveCount":"Số lượng chương trình phát sóng trực tiếp",
+   "feeSetting":"thiết lập phí ( bao gồm phí quản lý + phí thanh toán)",
+   "setFee":"phí đặt",
+   "keep":"save",
+   "editAccSuccess":"Đã thay đổi thành công cài đặt phí của bạn."
+  },
+ "khoản thanh toán": {
+   "titlePayoutHistory":"Quản lý thanh toán",
+   "textSearch":"Tìm kiếm theo tên cửa hàng",
+   "labelSearch":"Tìm kiếm",
+   "labelStatus":"Trạng thái",
+   "labelDateStart":"ngày bắt đầu",
+   "labelDateEnd":"Ngày kết thúc",
+   "statusWithDrawalUpComing":"không được rút",
+   "statusWithDrawalSuccess":"Đã rút",
+   "statusWithDrawalFailed":"Không thành công",
+   "tableHistory": {
+     "stt":"item",
+     "active":"Liên hệ với cửa hàng",
+     "ArrivalDate":"ngày rút tiền",
+     "số lượng":"số tiền rút",
+     "status":"trạng thái",
+     "nameStore":"tên cửa hàng"
+    },
+   "cá nhân":"cá nhân",
+   "company":"công ty",
+   "chi tiết": {
+     "titlePayout":"Thông tin Thanh toán",
+     "status":"trạng thái rút tiền",
+     "titleBank":"Thông tin tài khoản ngân hàng",
+     "bankName":"tên ngân hàng",
+     "bankBranchName":"Tên chi nhánh",
+     "accountIdentification":"Nhận dạng tài khoản",
+     "accountNumber":"số tài khoản",
+     "accountHolder":"chủ tài khoản",
+     "titleStoreInfo":"thông tin lưu trữ",
+     "currentBalance":"số dư hiện tại"
+    },
+   "tin nhắn": {
+     "msgStartDateLessEndDate":"Đảm bảo ngày kết thúc nhỏ hơn hoặc bằng ngày bắt đầu."
+    }
+  },
+ "C2002ListLiveStream": {
+   "title":"Quản lý phát sóng trực tiếp",
+   "liveStreaming":"Phát trực tiếp",
+   "liveStreamed":"đã phát trực tiếp",
+   "liveSoon":"sắp ra mắt",
+   "liveNow":"Đang phát trực tuyến",
+   "liveEnd":"luồng trực tiếp trước đây",
+   "liveCancel":"Hủy bỏ",
+   "khán giả":"khán giả",
+   "live":"sống"
+  },
+ "userChatManagement": {
+   "titleListChatStore":"Trò chuyện",
+   "placeholderFindStore":"Tìm",
+   "listChatEmpty1":"Khi bạn bắt đầu trò chuyện",
+   "listChatEmpty2":"Bạn có thể xem tất cả tin nhắn của mình tại đây.",
+   "notHaveStore1":"Không tìm thấy kết quả",
+   "notHaveStore2":"Vui lòng kiểm tra từ khóa",
+   "hôm qua":"hôm qua",
+   "btnViewStore":"Đến cửa hàng",
+   "btnViewUser":"vào trang cá nhân",
+   "xin chào":"Chào mừng đến với Fes Liaison !",
+   "btnBooking":"Đặt trước",
+   "placeholderInputMessage":"Nhập tin nhắn",
+   "DeleteMsg":"tin nhắn đã bị xóa",
+   "msgFromMe":"Bạn :",
+   "deleteMsg":"xóa",
+   "titleModalDeleteMsg1":"Xóa tin nhắn này.",
+   "titleModalDeleteMsg2":"Bạn có chắc không?",
+   "backBoxChat":"thông tin tài khoản",
+   "userGroupModalTitle":"Danh sách người tham gia ({{total}})",
+   "saw":"read",
+   "titleModalGroup":"Danh sách người tham gia"
+  },
+ "C2005ListOrders": {
+   "orderManagement":"Quản lý Đơn hàng",
+   "orderNumber":"số đơn hàng",
+   "storeName":"tên cửa hàng",
+   "customerName":"tên khách hàng",
+   "productName":"tên sản phẩm",
+   "orderDate":"ngày đặt hàng",
+   "số lượng":"Số lượng",
+   "tổng số":"Tổng số",
+   "trạng thái": {
+     "all":"tất cả",
+     "waitConfirm":"xác nhận",
+     "waitForGood":"Đang chờ giao hàng",
+     "shipping":"đã vận chuyển",
+     "đã chuyển":"đã nhận",
+     "hủy bỏ":"hủy bỏ"
+    },
+   "totalAmount":"tổng số tiền",
+   "hoa hồng":"hoa hồng"
+  },
+ "C2006OrderDetail": {
+   "title":"Chi tiết Đơn hàng",
+   "customerName":"tên khách hàng",
+   "orderId":"ID đặt hàng",
+   "btnChangeStatus": {
+     "confirmOrder":"Xác nhận đơn đặt hàng",
+     "hủy bỏ":"hủy bỏ",
+     "confirmShipping":"Đã giao hàng",
+     "confirmShipped":"Đã nhận"
+    },
+   "btnExport":"Xuất chi tiết thanh toán",
+   "fileExportName":"Kính gửi {{name }} _ Bảng sao kê thanh toán _ {{year}} năm {{month}} tháng {{ day }}",
+   "showStatus":"Trạng thái",
+   "rowProductDetail": {
+     "colImage":"Ảnh",
+     "colNameProduct":"Sản phẩm",
+     "colUnitPrice":"đơn giá",
+     "colQuantity":"Số lượng",
+     "colPriceProduct":"Tổng cộng",
+     "coupon":"phiếu giảm giá",
+     "notCoupon":"Tôi không có phiếu giảm giá",
+     "ghi chú": {
+       "title":"Ghi chú Đơn hàng",
+       "notHaveNote":"Tôi không có ghi chú",
+       "addNote":"Thêm ghi chú",
+       "maxLength":"{{length}} / {{ max_length }}"
+      },
+     "vận chuyển": {
+       "title":"thông tin biên nhận",
+       "name":"tên",
+       "nameFurigana":"tên (furigana)",
+       "phone":"số điện thoại",
+       "address":"địa chỉ"
+      },
+     "priceOrder": {
+       "title":"Thanh toán",
+       "totalPrice":"Tổng cộng",
+       "discountPrice":"chiết khấu phiếu giảm giá",
+       "PaymentPrice":"tổng giá"
+      }
+    },
+   "tin nhắn": {
+     "confirmSuccess":"Đơn đặt hàng của bạn đã được xác nhận. Vui lòng chuẩn bị cho việc giao hàng.",
+     "hủy thành công":"Đơn đặt hàng của bạn đã bị hủy.",
+     "shippingSuccess":"Đã thay đổi trạng thái đơn hàng thành Đã giao hàng .",
+     "shippingSuccess":"Đã thay đổi trạng thái đơn hàng thành đã giao hàng .",
+     "changeNoteSuccess":"Ghi chú đơn đặt hàng của bạn đã được lưu"
+    }
+  },
+ "myPageSettingPassword": {
+   "nowPasswordLabel":"mật khẩu hiện tại",
+   "nowPasswordRequired":"* Vui lòng nhập mật khẩu đã đăng ký của bạn.",
+   "newPasswordLabel":"mật khẩu mới",
+   "noteNewPassword":"* Vui lòng nhập ít nhất 8 ký tự bao gồm các bảng chữ cái nửa độ rộng ( kết hợp cả chữ hoa và chữ thường ) và số .",
+   "verifyPasswordLabel":"Xác nhận mật khẩu mới",
+   "noteConfirmPasswordLabel":"* Vui lòng nhập ít nhất 8 ký tự bao gồm các bảng chữ cái nửa độ rộng ( kết hợp cả chữ hoa và chữ thường ) và số .",
+   "modalRedirect": {
+     "content1":"Cài đặt mật khẩu chưa hoàn tất.",
+     "content2":"Nếu bạn rời đi, bạn không thể lưu những gì bạn đã nhập",
+     "content3":"Có . Bạn có chắc không?"
+    },
+   "modalSuccess": {
+     "title":"Mật khẩu đã thay đổi",
+     "content1":"Mật khẩu đã thay đổi.",
+     "content2":"Vì lý do bảo mật, mật khẩu mới tại",
+     "content3":"Bạn cần đăng nhập lại.",
+     "buttonOk":"Đăng nhập lại"
+    },
+   "title":"Cài đặt",
+   "passwordRequired":"* Vui lòng nhập mật khẩu của bạn.",
+   "passwordLen":"* Vui lòng nhập mật khẩu có 8 ký tự trở lên và 30 ký tự trở xuống.",
+   "passwordRegex":"* Vui lòng nhập ít nhất 8 ký tự bao gồm các bảng chữ cái nửa độ rộng ( kết hợp cả chữ hoa và chữ thường ) và số .",
+   "verifyPasswordInvalid":"* Nội dung của Mật khẩu không khớp.",
+   "notCheckPrivacyPolicy":"* Vui lòng xác nhận và nhấp vào hộp kiểm",
+   "emailRequired":"* Vui lòng nhập địa chỉ email của bạn."
+  },
+ "forgetPassword": {
+   "titleHeader":"Quên mật khẩu",
+   "emailLabel":"địa chỉ email đăng nhập",
+   "btnNext":"Tiếp theo",
+   "validateEmailRequired":"* Vui lòng nhập địa chỉ email đã đăng ký của bạn.",
+   "email":"email",
+   "validateEmailType":"* Định dạng địa chỉ email không chính xác.",
+   "verifyEmail": {
+     "title":"Email cấp lại mật khẩu đã được gửi thành công.",
+     "textLine1":"Email cấp lại mật khẩu đã được gửi thành công.",
+     "textLine2":"Một email đã được gửi đến địa chỉ của bạn để cấp lại mật khẩu của bạn.",
+     "textLine3":"Vui lòng kiểm tra nội dung của email.",
+     "textLine4":"Nếu bạn không nhận được email, vui lòng kiểm tra địa chỉ email của bạn và thử lại.",
+     "btnBack":"Quay lại",
+     "btnSendAgain":"Gửi lại email"
+    },
+   "msgSussessResendEmail":"Email đã được gửi lại.",
+   "msgErrorMailNotExist":"* Địa chỉ email này chưa được đăng ký. Vui lòng kiểm tra lại thông tin đầu vào.",
+   "msgErrorMailBlocked":"* Địa chỉ email này dành cho tài khoản bị chặn, vì vậy bạn không thể đặt lại mật khẩu của mình."
+  },
+ "resetPassword": {
+   "titleHeader":"Xác nhận Mật khẩu Mới",
+   "newPasswordLabel":"mật khẩu mới",
+   "confirmNewPasswordLabel":"Xác nhận mật khẩu mới",
+   "btnSubmit":"Xác nhận",
+   "titleSuccess":"Đã hoàn tất đặt lại mật khẩu.",
+   "btnBack":"Đến màn hình đăng nhập",
+   "verifyPasswordInvalid":"* Mật khẩu được nhập lại không chính xác. Vui lòng xác nhận.",
+   "xác thực": {
+     "passwordRequired":"* Vui lòng nhập mật khẩu của bạn.",
+     "passwordLen":"* Vui lòng nhập mật khẩu có 8 ký tự trở lên và 30 ký tự trở xuống.",
+     "passwordRegex":"* Vui lòng nhập ít nhất 8 ký tự bao gồm các bảng chữ cái nửa độ rộng ( kết hợp cả chữ hoa và chữ thường ) và số .",
+     "verifyPasswordInvalid":"* Nội dung của Mật khẩu không khớp."
+    }
+  },
+ "trang404": {
+   "title":"URL này không hợp lệ.",
+   "backToHome":"quay lại trang chủ"
+  },
+ "sống": {
+   "comment":"bình luận",
+   "inputPlaceholder":"trò chuyện",
+   "live":"sống",
+   "needLogin":"Bạn có thể nhận xét sau khi đăng nhập.",
+   "backToHome":"quay lại trang chủ",
+   "viewNo":"Người xem",
+   "startTime":"Phát trực tiếp :",
+   "isStore":"cửa hàng",
+   "commentDeleted":"Thư đã bị xóa",
+   "deleteComment":"xóa nhận xét",
+   "deleteCommentText":"Xóa nhận xét này.",
+   "deleteCommentTextConfirm":"Bạn có chắc không?",
+   "endLive":"dừng phát trực tiếp",
+   "endLiveConfirm":"Hủy sự kiện trực tiếp này. Bạn có chắc chắn không? THẬN TRỌNG: Không thể hoàn tác thao tác này",
+   "deleteLive":"xóa trực tiếp",
+   "deleteLiveConfirm":"Xóa trực tiếp này. Bạn có chắc chắn không? THẬN TRỌNG: Không thể truy xuất tác vụ này.",
+   "giờ":"giờ",
+   "phút":"phút",
+   "error": {
+     "đã kết thúc":"Luồng trực tiếp đã kết thúc",
+     "notStart":"Luồng trực tiếp chưa bắt đầu",
+     "outLive":"Luồng trực tiếp đã bị tạm dừng. Vui lòng đợi.",
+     "devicePermission":"Không thể truy cập máy ảnh và micrô.",
+     "cantStartVideo":"Video và micrô không hoạt động. Vui lòng tải lại trang.",
+     "joinSomethingElse":"Buổi phát trực tiếp này hiện đang được phát ở nơi khác",
+     "liveHasOff":"Trực tiếp này đã bị hủy.",
+     "liveEnded":"Buổi phát trực tiếp đã kết thúc. Cảm ơn sự hợp tác của bạn.",
+     "noExists":"Luồng trực tiếp không tồn tại."
+    }
+  },
+ "storeDetail": {
+   "chat":"trò chuyện",
+   "booking":"đặt chỗ"
   }
 }
