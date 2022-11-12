@@ -88,7 +88,7 @@ export default function SideNav() {
   const routes: IRoutes[] = [
     {
       key: '1',
-      text: 'ダッシュボード',
+      text: 'Thống kê',
       url: '/dashboard',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,38 +117,8 @@ export default function SideNav() {
       ),
     },
     {
-      key: '2',
-      text: 'ライブ配信管理',
-      url: '/live-streams',
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M12.53 20.42H6.21C3.05 20.42 2 18.32 2 16.21V7.79002C2 4.63002 3.05 3.58002 6.21 3.58002H12.53C15.69 3.58002 16.74 4.63002 16.74 7.79002V16.21C16.74 19.37 15.68 20.42 12.53 20.42Z"
-            stroke="#888888"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M19.5202 17.1L16.7402 15.15V8.84001L19.5202 6.89001C20.8802 5.94001 22.0002 6.52001 22.0002 8.19001V15.81C22.0002 17.48 20.8802 18.06 19.5202 17.1Z"
-            stroke="#888888"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M11.5 11C12.3284 11 13 10.3284 13 9.5C13 8.67157 12.3284 8 11.5 8C10.6716 8 10 8.67157 10 9.5C10 10.3284 10.6716 11 11.5 11Z"
-            stroke="#888888"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      ),
-    },
-    {
       key: '3',
-      text: '商品管理',
+      text: 'Quản lý sản phẩm',
       url: '/products-management',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -179,7 +149,7 @@ export default function SideNav() {
     },
     {
       key: '4',
-      text: '注文管理',
+      text: 'Quản lý đơn hàng',
       url: '/list-orders',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -206,56 +176,8 @@ export default function SideNav() {
       subUrl: '/order-detail',
     },
     {
-      key: '5',
-      text: '支払い管理',
-      url: '/payment',
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M2 8.5H14.5"
-            stroke="#888888"
-            strokeWidth="1.5"
-            strokeMiterlimit="10"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M6 16.5H8"
-            stroke="#888888"
-            strokeWidth="1.5"
-            strokeMiterlimit="10"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M10.5 16.5H14.5"
-            stroke="#888888"
-            strokeWidth="1.5"
-            strokeMiterlimit="10"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M22 14.03V16.11C22 19.62 21.11 20.5 17.56 20.5H6.44C2.89 20.5 2 19.62 2 16.11V7.89C2 4.38 2.89 3.5 6.44 3.5H14.5"
-            stroke="#888888"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M20 9.5V3.5L22 5.5"
-            stroke="#888888"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path d="M20 3.5L18 5.5" stroke="#888888" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      ),
-    },
-    {
       key: '6',
-      text: 'ユーザー管理',
+      text: 'Quản lý user',
       url: '/user-management',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -278,7 +200,7 @@ export default function SideNav() {
     },
     {
       key: '7',
-      text: '出店申込者管理',
+      text: 'Quản lý yêu cầu tạo shop',
       url: '/upgrade-shop-requests',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -296,7 +218,7 @@ export default function SideNav() {
     },
     {
       key: '8',
-      text: '店舗管理',
+      text: 'Quản lý shop',
       url: '/store-management',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -340,7 +262,7 @@ export default function SideNav() {
     },
     {
       key: CATEGORY_ROUTE_KEY,
-      text: 'マスターデータ',
+      text: 'Danh mục',
       url: '/categories',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -384,7 +306,7 @@ export default function SideNav() {
     },
     {
       key: '10',
-      text: '設定',
+      text: 'Cài đặt',
       url: '/setting-password',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -407,7 +329,7 @@ export default function SideNav() {
     },
     {
       key: '11',
-      text: 'ログアウト',
+      text: 'Đăng xuất',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
