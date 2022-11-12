@@ -6,7 +6,6 @@ import dayjs from 'dayjs';
 import Cookies from 'js-cookie';
 import { Helmet } from 'react-helmet-async';
 import { UploadChangeParam } from 'antd/lib/upload';
-import { RuleObject } from 'antd/lib/form';
 import { AxiosError } from 'axios';
 import { useIsFetching, useMutation, useQueryClient } from 'react-query';
 import classNames from 'classnames';
@@ -16,7 +15,6 @@ import {
   ACCEPT_UPLOAD_CATEGORY_IMAGE_TYPE,
   DEFAULT_PAGE_ANTD,
   CATEGORY_CANT_DELETE_ERROR_CODE,
-  LOCATION_NAME_REGEX,
   NAME_CATEGORY_MAX_LENGTH,
   IMAGE_CATEGORY_MAX_SIZE_MB,
   PAGE_PAGINATION_10,
@@ -518,14 +516,6 @@ export default function ListCategory() {
                     max: NAME_CATEGORY_MAX_LENGTH,
                     message: t('listCategory.modalAddCategory.validate.nameLen'),
                   },
-                  () => ({
-                    validator(_: RuleObject, value: string) {
-                      if (value && value.length <= NAME_CATEGORY_MAX_LENGTH && !value.match(LOCATION_NAME_REGEX)) {
-                        return Promise.reject(new Error(t('listCategory.modalAddCategory.validate.nameRegex')));
-                      }
-                      return Promise.resolve();
-                    },
-                  }),
                 ]}
               >
                 <Input
@@ -626,14 +616,6 @@ export default function ListCategory() {
                     max: NAME_CATEGORY_MAX_LENGTH,
                     message: t('listCategory.modalAddCategory.validate.nameLen'),
                   },
-                  () => ({
-                    validator(_: RuleObject, value: string) {
-                      if (value && value.length <= NAME_CATEGORY_MAX_LENGTH && !value.match(LOCATION_NAME_REGEX)) {
-                        return Promise.reject(new Error(t('listCategory.modalAddCategory.validate.nameRegex')));
-                      }
-                      return Promise.resolve();
-                    },
-                  }),
                 ]}
               >
                 <Input

@@ -5,7 +5,6 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import dayjs from 'dayjs';
 import Cookies from 'js-cookie';
 import { Helmet } from 'react-helmet-async';
-import { RuleObject } from 'antd/lib/form';
 import { AxiosError } from 'axios';
 import { useIsFetching, useMutation, useQueryClient } from 'react-query';
 import classNames from 'classnames';
@@ -14,7 +13,6 @@ import styles from './style.module.scss';
 import {
   DEFAULT_PAGE_ANTD,
   CATEGORY_CANT_DELETE_ERROR_CODE,
-  LOCATION_NAME_REGEX,
   NAME_CATEGORY_MAX_LENGTH,
   PAGE_PAGINATION_10,
   BRAND_DEFAULT_STATUS,
@@ -374,14 +372,6 @@ export default function ListBrand() {
                     max: NAME_CATEGORY_MAX_LENGTH,
                     message: t('listBrand.modalAddBrand.validate.nameLen'),
                   },
-                  () => ({
-                    validator(_: RuleObject, value: string) {
-                      if (value && value.length <= NAME_CATEGORY_MAX_LENGTH && !value.match(LOCATION_NAME_REGEX)) {
-                        return Promise.reject(new Error(t('listBrand.modalAddBrand.validate.nameRegex')));
-                      }
-                      return Promise.resolve();
-                    },
-                  }),
                 ]}
               >
                 <Input
@@ -438,14 +428,6 @@ export default function ListBrand() {
                     max: NAME_CATEGORY_MAX_LENGTH,
                     message: t('listBrand.modalAddBrand.validate.nameLen'),
                   },
-                  () => ({
-                    validator(_: RuleObject, value: string) {
-                      if (value && value.length <= NAME_CATEGORY_MAX_LENGTH && !value.match(LOCATION_NAME_REGEX)) {
-                        return Promise.reject(new Error(t('listBrand.modalAddBrand.validate.nameRegex')));
-                      }
-                      return Promise.resolve();
-                    },
-                  }),
                 ]}
               >
                 <Input
