@@ -285,6 +285,9 @@ declare interface IProductMedias {
 declare interface IBasicInformationProduct {
   id: number;
   min_price: string;
+  price: string;
+  discount: string;
+  description: string;
   max_price: string;
   max_discount: string;
   min_discount: string;

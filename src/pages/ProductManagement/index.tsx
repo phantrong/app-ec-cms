@@ -1,26 +1,18 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { Row, Col, Typography, Table, Pagination, Form, FormInstance, message, Modal, Skeleton } from 'antd';
+import React, { useState, useCallback } from 'react';
+import { Row, Col, Typography, Table, Pagination, Skeleton } from 'antd';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 import { Helmet } from 'react-helmet-async';
-import { useMutation, useQueryClient } from 'react-query';
 
-import { STATUS_PRODUCT, PAGE_PAGINATION_10, DEFAULT_PAGE_ANTD, TYPE_BTN } from 'constants/constants';
+import { PAGE_PAGINATION_10, DEFAULT_PAGE_ANTD } from 'constants/constants';
 import { useListProduct } from 'hooks/useListProduct';
 import InputNumber from 'components/InputNumber';
 import SearchInput from 'components/SearchInput';
 import SelectComponent from 'components/SelectComponent';
-import { formatCurrencyNumber } from 'helper';
-import CommonBtn from 'components/CommonBtn';
-import CommonModalForm from 'components/CommonModalForm';
-import ModalMarkViolation from './ModalMarkViolation';
-import { GET_LIST_PRODUCT } from 'constants/keyQuery';
-import { apiMarkViolation, apiUnMarkViolation } from 'api/listProduct';
 
 import stylesTable from 'styles/table.module.scss';
 import styles from './styles.module.scss';
-import iconHandleView from 'assets/images/handle-view.svg';
-import configs from 'config';
+import { formatCurrencyNumberToFixed } from 'helper';
 
 const { Text } = Typography;
 
@@ -40,44 +32,12 @@ const initialPrice: IPrice = {
 
 const ProductManagement = () => {
   const { t } = useTranslation();
-  const query = useQueryClient();
-  const { confirm } = Modal;
-  const [form]: FormInstance<any>[] = Form.useForm();
   const [filter, setFilter] = useState<IFilterListProduct>(defaultFilter);
   const [priceMinMax, setFilterMinMax] = useState<IPrice>(initialPrice);
   const [errorPrice, setErrorPrice] = useState<string | null>();
-  const [isShowModal, setIsShowModal] = useState<boolean>(false);
-  const [selectedId, setSelectedId] = useState<number | undefined>();
-  const [idRedirect, setIdRedirect] = useState<number | undefined>();
 
   // Data
   const { data: listProduct, isLoading: isLoadingListProduct }: IDataListProduct = useListProduct(filter);
-
-  // Update staff
-  const { mutate: markViolation, isLoading: isLoadingMarkViolation } = useMutation(
-    (dataSend: IMarkViolation) => apiMarkViolation(dataSend),
-    {
-      onSuccess: () => {
-        message.success(t('listProduct.sentMsgToSeller'));
-        query.refetchQueries(GET_LIST_PRODUCT);
-        handleCancel();
-      },
-    }
-  );
-
-  const { mutate: unMarkViolation, isLoading: isLoadingUnMarkViolation } = useMutation(
-    () => apiUnMarkViolation(selectedId),
-    {
-      onSuccess: () => {
-        message.success(t('listProduct.cancelMark'));
-        query.refetchQueries(GET_LIST_PRODUCT);
-      },
-    }
-  );
-
-  useEffect(() => {
-    if (isShowModal === false) setSelectedId(undefined);
-  }, [isShowModal]);
 
   const totalOptions: number | undefined = listProduct?.status_filter
     ?.map((item: { status: number; quantity: number }) => item.quantity)
@@ -89,97 +49,7 @@ const ProductManagement = () => {
       value: null,
       name: `${t('common.all')} (${totalOptions})`,
     },
-    {
-      value: STATUS_PRODUCT.IN_STOCK,
-      name: `${t('listProduct.status.inventory')} (${listProduct?.status_filter[0].quantity})`,
-    },
-    {
-      value: STATUS_PRODUCT.SOLD_OUT,
-      name: `${t('listProduct.status.soldOut')} (${listProduct?.status_filter[2].quantity})`,
-    },
-    {
-      value: STATUS_PRODUCT.NO_PRODUCT,
-      name: `${t('listProduct.status.noProduct')} (${listProduct?.status_filter[1].quantity})`,
-    },
-    {
-      value: STATUS_PRODUCT.VIOLATION,
-      name: `${t('listProduct.status.violation')} (${listProduct?.status_filter[3].quantity})`,
-    },
   ];
-
-  const getStyleBtnStatus = useCallback((status: number, stock: number) => {
-    if (status === STATUS_PRODUCT.PUBLIC_OR_PRIVATE && stock > 0) {
-      return styles.inventory;
-    }
-    if (status === STATUS_PRODUCT.NO_PRODUCT) {
-      return styles.hiddenProduct;
-    }
-    if (status === STATUS_PRODUCT.PUBLIC_OR_PRIVATE && stock === 0) {
-      return styles.soldOut;
-    }
-    if (status === STATUS_PRODUCT.VIOLATION) {
-      return styles.violation;
-    }
-  }, []);
-
-  const getTextBtnStatus = useCallback(
-    (status: number, stock: number) => {
-      if (status === STATUS_PRODUCT.PUBLIC_OR_PRIVATE && stock > 0) {
-        return t('listProduct.status.inventory');
-      }
-      if (status === STATUS_PRODUCT.NO_PRODUCT) {
-        return t('listProduct.status.noProduct');
-      }
-      if (status === STATUS_PRODUCT.PUBLIC_OR_PRIVATE && stock === 0) {
-        return t('listProduct.status.soldOut');
-      }
-      if (status === STATUS_PRODUCT.VIOLATION) {
-        return t('listProduct.status.violation');
-      }
-    },
-    [t]
-  );
-
-  // Delete violation modal
-  const handleOpenModalDeleteViolation = useCallback(
-    (id?: number) => {
-      confirm({
-        title: <div>{t('listProduct.doYouWannaDeleteViolation')}</div>,
-        okText: t('common.delete'),
-        cancelText: t('common.cancel'),
-        icon: <></>,
-        className: 'modal-confirm-normal',
-        okButtonProps: {
-          loading: isLoadingUnMarkViolation,
-        },
-        centered: true,
-        onOk() {
-          unMarkViolation();
-        },
-        onCancel() {
-          setSelectedId(undefined);
-        },
-      });
-    },
-    [confirm, isLoadingUnMarkViolation, t, unMarkViolation]
-  );
-
-  // Delete violation modal
-  const handleOpenModalNotShowDetail = useCallback(() => {
-    confirm({
-      title: (
-        <>
-          <div>{t('listProduct.lineNotShow1')}</div>
-          <div>{t('listProduct.lineNotShow2')}</div>
-        </>
-      ),
-      okText: t('common.confirm'),
-      icon: <></>,
-      cancelButtonProps: { style: { display: 'none' } },
-      className: 'modal-confirm-normal',
-      centered: true,
-    });
-  }, [confirm, t]);
 
   const columns = [
     {
@@ -189,7 +59,7 @@ const ProductManagement = () => {
       render: (value: IBasicInformationProduct, item: IBasicInformationProduct, index: number) => (
         <div
           className={classNames({
-            [styles.multiColumn]: item.product_classes.length > 1,
+            [styles.multiColumn]: false,
           })}
         >
           {listProduct && listProduct.products.from + index}
@@ -201,8 +71,8 @@ const ProductManagement = () => {
       render: (value: IBasicInformationProduct, item: IBasicInformationProduct, index: number) => (
         <div
           className={classNames({
-            [styles.multiColumn]: item.product_classes.length > 1,
-            [styles.multiColumnPhoto]: item.product_classes.length > 1,
+            [styles.multiColumn]: false,
+            [styles.multiColumnPhoto]: false,
           })}
         >
           <img className={styles.photoProduct} src={item.product_medias[0].media_path} alt="product" />
@@ -216,7 +86,7 @@ const ProductManagement = () => {
       render: (value: IBasicInformationProduct, item: IBasicInformationProduct, index: number) => (
         <div
           className={classNames({
-            [styles.multiColumn]: item.product_classes.length > 1,
+            [styles.multiColumn]: false,
             [styles.longContent]: true,
           })}
         >
@@ -228,26 +98,7 @@ const ProductManagement = () => {
       title: t('listProduct.table.productDetail'),
       render: (value: IBasicInformationProduct, item: IBasicInformationProduct, index: number) => (
         <div key={index} className={styles.multiRows}>
-          {item.product_classes.map((product_class: IProductClasses, index_product_class: number) => (
-            <div key={index_product_class} className={styles.itemMultiRows}>
-              {product_class?.product_type_configs?.length ? (
-                <>
-                  {product_class.product_type_configs.map((type_config: IProductType, index_type: number) => (
-                    <span
-                      className={classNames({
-                        [styles.configType]: product_class.product_type_configs.length >= 2,
-                      })}
-                      key={index_type}
-                    >
-                      {type_config.type_name}
-                    </span>
-                  ))}
-                </>
-              ) : (
-                <span>{t('listProduct.table.noTypeConfig')}</span>
-              )}
-            </div>
-          ))}
+          {item?.description}
         </div>
       ),
     },
@@ -261,104 +112,11 @@ const ProductManagement = () => {
       title: t('listProduct.table.unitPrice'),
       render: (value: IBasicInformationProduct, item: IBasicInformationProduct, index: number) => (
         <div key={index} className={styles.multiRows}>
-          {item.product_classes.map((product_class: IProductClasses, index_product_class: number) => (
-            <div key={index_product_class} className={styles.itemMultiRows}>
-              ¥{formatCurrencyNumber(product_class.discount)}
-            </div>
-          ))}
+          {formatCurrencyNumberToFixed(item?.price)} VNĐ
         </div>
       ),
-    },
-    {
-      title: t('listProduct.table.quantityInventory'),
-      render: (value: IBasicInformationProduct, item: IBasicInformationProduct, index: number) => (
-        <div key={index} className={styles.multiRows}>
-          {item.product_classes.map((product_class: IProductClasses, index_product_class: number) => (
-            <div key={index_product_class} className={styles.itemMultiRows}>
-              {product_class?.total_product
-                ? `${product_class.total_product}/${product_class.stock}`
-                : `0/${product_class.stock}`}
-            </div>
-          ))}
-        </div>
-      ),
-    },
-    {
-      title: t('listProduct.table.salesNoCouponApplied'),
-      render: (value: IBasicInformationProduct, item: IBasicInformationProduct, index: number) => (
-        <div key={index} className={styles.multiRows}>
-          {item.product_classes.map((product_class: IProductClasses, index_product_class: number) => (
-            <div key={index_product_class} className={styles.itemMultiRows}>
-              ¥{formatCurrencyNumber(product_class.revenue)}
-            </div>
-          ))}
-        </div>
-      ),
-    },
-    {
-      title: t('common.status'),
-      dataIndex: 'status',
-      key: 'status',
-      render: (value: IBasicInformationProduct, item: IBasicInformationProduct, index: number) => (
-        <div
-          className={classNames({
-            [styles.multiColumn]: item.product_classes.length > 1,
-          })}
-        >
-          <div className={getStyleBtnStatus(item.status, item.stock)}>{getTextBtnStatus(item.status, item.stock)}</div>
-        </div>
-      ),
-    },
-    {
-      render: (value: IBasicInformationProduct) => (
-        <div
-          className={classNames(styles.actionRow, stylesTable.icon, {
-            [styles.multiColumnIcon]: value.product_classes.length > 1,
-          })}
-        >
-          {getTextBtnStatus(value.status, value.stock) === t('listProduct.status.violation') ? (
-            <div>
-              <CommonBtn
-                handleClick={() => {
-                  setSelectedId(value.id);
-                  handleOpenModalDeleteViolation(value.id);
-                }}
-                text={t('listProduct.removeViolation')}
-                type={TYPE_BTN.TYPE_ADD_TO_CART}
-              />
-            </div>
-          ) : (
-            <div>
-              <CommonBtn
-                handleClick={() => {
-                  setSelectedId(value.id);
-                  setIsShowModal(true);
-                }}
-                text={t('listProduct.status.violation')}
-                type={TYPE_BTN.TYPE_BUY}
-              />
-            </div>
-          )}
-
-          <img
-            src={iconHandleView}
-            alt="eye"
-            onClick={() => {
-              if (getTextBtnStatus(value.status, value.stock) === t('listProduct.status.violation')) {
-                return handleOpenModalNotShowDetail();
-              }
-              setIdRedirect(value.id);
-            }}
-          />
-        </div>
-      ),
-      className: styles.rowIcon,
     },
   ];
-
-  useEffect(() => {
-    if (idRedirect) window.open(`${configs.USER_DOMAIN}/products/${idRedirect}`, '_blank');
-  }, [idRedirect]);
 
   // Pagination
   const handleChangePage = useCallback(
@@ -453,23 +211,6 @@ const ProductManagement = () => {
     [priceMinMax]
   );
 
-  const handleFinish = useCallback(
-    (values: { violation_reason: string }) => {
-      markViolation({
-        id: selectedId,
-        violation_reason: values.violation_reason,
-        is_mark_violation: true,
-      });
-    },
-    [markViolation, selectedId]
-  );
-
-  // Handle action
-  const handleCancel = useCallback(() => {
-    setIsShowModal(false);
-    form.resetFields();
-  }, [form]);
-
   return (
     <Row className={styles.row}>
       <Helmet>
@@ -535,16 +276,6 @@ const ProductManagement = () => {
             <p className={styles.errorPrice}>{errorPrice}</p>
           </div>
         </Row>
-
-        <CommonModalForm
-          isModalVisible={isShowModal}
-          title={t('listProduct.report')}
-          mainContent={
-            <ModalMarkViolation handleFinish={handleFinish} form={form} isLoading={isLoadingMarkViolation} />
-          }
-          hasNoFooter
-          handleCancel={handleCancel}
-        />
 
         {/* Row table */}
         <div className={styles.table}>
