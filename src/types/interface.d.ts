@@ -396,6 +396,7 @@ declare interface IUserData {
   id: number;
   name: string;
   phone: string;
+  address: string;
   place: string;
   province_name: string;
   surname: string;

@@ -46,11 +46,7 @@ const UserManagement = () => {
     },
     {
       title: t('C2010UserManagement.userName'),
-      render: (value: IUserData) => (
-        <div className={styles.longContent}>
-          {value.name} {value.surname}
-        </div>
-      ),
+      render: (value: IUserData) => <div className={styles.longContent}>{value.name}</div>,
     },
     {
       title: t('C2010UserManagement.mailAddress'),
@@ -63,11 +59,7 @@ const UserManagement = () => {
     },
     {
       title: t('C2010UserManagement.addRess'),
-      render: (value: IUserData) => (
-        <div className={styles.longContent}>
-          {value.province_name} {value.city} {value.place} {value.home_address}
-        </div>
-      ),
+      render: (value: IUserData) => <div className={styles.longContent}>{value.address}</div>,
     },
     {
       title: t('C2010UserManagement.createdAt'),
