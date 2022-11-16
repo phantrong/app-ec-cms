@@ -14,7 +14,6 @@ import CommonDatePicker from 'components/CommonDatePicker';
 import styles from './styles.module.scss';
 import stylesTable from 'styles/table.module.scss';
 import stylesDatePicker from 'styles/datePicker.module.scss';
-import iconMsg from 'assets/images/icons/icon-messages.svg';
 import iconEye from 'assets/images/icons/icon-eye.svg';
 
 const UserManagement = () => {
@@ -68,7 +67,6 @@ const UserManagement = () => {
     {
       render: (value: IUserData) => (
         <div className={styles.iconRow}>
-          <img src={iconMsg} alt="msg" onClick={() => navigate(`/user-management/chat-messenger/${value.id}`)} />
           <img
             src={iconEye}
             alt="eye"

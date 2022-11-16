@@ -12,7 +12,6 @@ import styles from './styles.module.scss';
 import iconBack from 'assets/images/icons/icon-back-left.svg';
 import iconCall from 'assets/images/icons/icon-call.svg';
 import iconSms from 'assets/images/icons/icon-sms.svg';
-import iconMsgBrown from 'assets/images/icons/icon-msg-brown.svg';
 import iconLocation from 'assets/images/icons/icon-location-store.svg';
 import iconCalendarAdd from 'assets/images/icons/icon-calendar-add.svg';
 import useViewport from 'hooks/useViewPort';
@@ -83,7 +82,7 @@ const UserDetail = () => {
 
                   <div className={styles.phone}>
                     <img src={iconLocation} alt="address" />
-                    {userDetail?.province_name} {userDetail?.city} {userDetail?.place} {userDetail?.home_address}
+                    {userDetail?.address}
                   </div>
 
                   <div className={styles.email}>
@@ -91,14 +90,6 @@ const UserDetail = () => {
                     {moment(userDetail?.created_at).format('YYYY/MM/DD')}
                   </div>
                 </div>
-              </Col>
-              <Col span={isMobile ? 2 : 4}>
-                <img
-                  src={iconMsgBrown}
-                  alt="msg"
-                  className={styles.iconMsg}
-                  onClick={() => navigate(`/user-management/chat-messenger/${userDetail?.id}`)}
-                />
               </Col>
             </Row>
           </div>

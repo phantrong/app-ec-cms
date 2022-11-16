@@ -423,6 +423,7 @@ declare interface IUserDetail {
   name: string;
   phone: string;
   place: string;
+  address: string;
   province_name: string;
   surname: string;
   birthday: string;
