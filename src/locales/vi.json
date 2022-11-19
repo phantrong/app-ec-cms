@@ -222,8 +222,9 @@
      "description":"Giới thiệu về cửa hàng"
     },
    "stripeForm": {
-     "title":"thông tin người phụ trách ( để tạo tài khoản được liên kết với Stripe ) ( để tạo tài khoản được liên kết với Stripe )",
+     "title":"Thông tin người phụ trách",
      "name":"tên người phụ trách",
+     "email":"Email người phụ trách",
      "nameFurigana":"Tên người phụ trách (furigana)",
      "gender":"giới tính",
      "birthday":"ngày sinh",

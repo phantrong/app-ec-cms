@@ -1,282 +1,281 @@
 .listUpgradeShopRequest {
-  margin-left: 84px;
-  position: relative;
-  .title {
-    padding: 10px 30px 0px 20px;
-    display: flex;
-    align-items: flex-start;
-    h2 {
-      font-size: 18px;
-      font-weight: 700;
-      img {
-        cursor: pointer;
-      }
-    }
-    .colFilter {
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-      align-items: flex-end;
-      .filter {
+    margin-left: 84px;
+    position: relative;
+    .title {
+        padding: 10px 30px 0px 20px;
         display: flex;
-        justify-content: flex-start;
-        width: 100%;
-        .titleFilter {
-          font-weight: 700;
+        align-items: flex-start;
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            img {
+                cursor: pointer;
+            }
         }
-        .selectFilter {
-          border: 0.5px solid #d6d6d6 !important;
-          box-sizing: border-box;
-          border-radius: 10px;
-          background-color: white;
-          height: 36px;
-          width: 100%;
-          font-weight: 400;
-          display: flex;
-          align-items: center;
-          justify-items: center;
-          &:focus,
-          &:hover {
-            box-shadow: none !important;
-          }
+        .colFilter {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: flex-end;
+            .filter {
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                .titleFilter {
+                    font-weight: 700;
+                }
+                .selectFilter {
+                    border: 0.5px solid #d6d6d6 !important;
+                    box-sizing: border-box;
+                    border-radius: 10px;
+                    background-color: white;
+                    height: 36px;
+                    width: 100%;
+                    font-weight: 400;
+                    display: flex;
+                    align-items: center;
+                    justify-items: center;
+                    &:focus,
+                    &:hover {
+                        box-shadow: none !important;
+                    }
+                }
+            }
         }
-      }
     }
-  }
-  button {
-    border-radius: 10px;
-    color: white;
-    height: auto;
-  }
-  .table {
-    padding: 10px 30px 10px 20px;
-    .indexColumn,
-    .nameColumn,
-    .emailColumn,
-    .phoneColumn,
-    .statusColumn,
-    .handleColumn {
-      background: none;
-      word-break: break-all;
-      &::before {
-        width: 0px !important;
-      }
-    }
-    .indexColumn,
-    .handleColumn {
-      max-width: 5%;
-      width: 5%;
-      white-space: nowrap;
-      img {
-        cursor: pointer;
-      }
-    }
-    .nameColumn,
-    .phoneColumn {
-      max-width: 20%;
-      width: 20%;
-    }
-    .emailColumn,
-    .statusColumn {
-      max-width: 25%;
-      width: 25%;
-    }
-    .nameColumn,
-    .phoneColumn {
-      white-space: nowrap;
-      max-width: 250px;
-      width: 250px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      background: none;
-      &::before {
-        width: 0px !important;
-      }
-    }
-    .statusColumn,
-    .emailColumn {
-      white-space: nowrap;
-      max-width: 350px;
-      width: 350px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      background: none;
-      &::before {
-        width: 0px !important;
-      }
-    }
-    :global {
-      .ant-table {
+    button {
         border-radius: 10px;
-      }
-      .hasBackground {
-        background-color: #f6f6f6;
-        border: 0.5px solid #d6d6d6;
-      }
-      .ant-table-content {
-        border-radius: 10px;
-        border: 0.5px solid #d6d6d6;
-      }
-      .ant-table-container table > tbody > tr:last-child td:first-child {
-        border-bottom-left-radius: 10px;
-      }
-      .ant-table-container table > tbody > tr:last-child td:last-child {
-        border-bottom-right-radius: 10px;
-      }
+        color: white;
+        height: auto;
     }
-    .approvedBtn,
-    .waitApproveBtn,
-    .deniedBtn {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 4px 8px;
-      font-size: 14px;
-      border-radius: 150px;
-      width: 120px;
-      color: white;
-      pointer-events: none;
+    .table {
+        padding: 10px 30px 10px 20px;
+        .indexColumn,
+        .nameColumn,
+        .emailColumn,
+        .phoneColumn,
+        .statusColumn,
+        .handleColumn {
+            background: none;
+            word-break: break-all;
+            &::before {
+                width: 0px !important;
+            }
+        }
+        .indexColumn,
+        .handleColumn {
+            max-width: 5%;
+            width: 5%;
+            white-space: nowrap;
+            img {
+                cursor: pointer;
+            }
+        }
+        .nameColumn,
+        .phoneColumn {
+            max-width: 20%;
+            width: 20%;
+        }
+        .emailColumn,
+        .statusColumn {
+            max-width: 25%;
+            width: 25%;
+        }
+        .nameColumn,
+        .phoneColumn {
+            white-space: nowrap;
+            max-width: 250px;
+            width: 250px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: none;
+            &::before {
+                width: 0px !important;
+            }
+        }
+        .statusColumn,
+        .emailColumn {
+            white-space: nowrap;
+            max-width: 350px;
+            width: 350px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: none;
+            &::before {
+                width: 0px !important;
+            }
+        }
+         :global {
+            .ant-table {
+                border-radius: 10px;
+            }
+            .hasBackground {
+                background-color: #f6f6f6;
+                border: 0.5px solid #d6d6d6;
+            }
+            .ant-table-content {
+                border-radius: 10px;
+                border: 0.5px solid #d6d6d6;
+            }
+            .ant-table-container table>tbody>tr:last-child td:first-child {
+                border-bottom-left-radius: 10px;
+            }
+            .ant-table-container table>tbody>tr:last-child td:last-child {
+                border-bottom-right-radius: 10px;
+            }
+        }
+        .approvedBtn,
+        .waitApproveBtn,
+        .deniedBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 4px 8px;
+            font-size: 14px;
+            border-radius: 150px;
+            width: 150px;
+            color: white;
+            pointer-events: none;
+        }
+        .approvedBtn {
+            background-color: #528f75;
+            border-color: #528f75;
+        }
+        .waitApproveBtn {
+            background-color: #5e7aa9;
+            border-color: #5e7aa9;
+        }
+        .deniedBtn {
+            background-color: #e2582a;
+            border-color: #e2582a;
+        }
+        .waitStripeBtn {
+            background-color: #efc028;
+            border-color: #efc028;
+        }
     }
-    .approvedBtn {
-      background-color: #528f75;
-      border-color: #528f75;
-    }
-    .waitApproveBtn {
-      background-color: #5e7aa9;
-      border-color: #5e7aa9;
-    }
-    .deniedBtn {
-      background-color: #e2582a;
-      border-color: #e2582a;
-    }
-    .waitStripeBtn {
-      background-color: #efc028;
-      border-color: #efc028;
-    }
-  }
-  .colPagination {
-    padding: 20px 30px 20px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    :global {
-      .ant-pagination {
+    .colPagination {
+        padding: 20px 30px 20px 20px;
         display: flex;
-        justify-content: flex-end;
-        .ant-pagination-jump-next,
-        .ant-pagination-jump-prev {
-          width: 40px;
-          height: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 10px !important;
-          background-color: #f6f6f6 !important;
-          .ant-pagination-item-link-icon {
-            color: gray;
-          }
-          .ant-pagination-item-ellipsis {
-            margin: 0 0 0 -5px;
-          }
+        justify-content: space-between;
+        align-items: center;
+         :global {
+            .ant-pagination {
+                display: flex;
+                justify-content: flex-end;
+                .ant-pagination-jump-next,
+                .ant-pagination-jump-prev {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px !important;
+                    background-color: #f6f6f6 !important;
+                    .ant-pagination-item-link-icon {
+                        color: gray;
+                    }
+                    .ant-pagination-item-ellipsis {
+                        margin: 0 0 0 -5px;
+                    }
+                }
+                .ant-pagination-item,
+                .ant-pagination-next,
+                .ant-pagination-prev {
+                    height: 40px;
+                    width: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 700;
+                    border-radius: 10px !important;
+                    .ant-pagination-item-link {
+                        border-radius: 10px !important;
+                    }
+                }
+                .ant-pagination-item {
+                    border: 1px solid #d6d6d6;
+                }
+                button:not([disabled]) {
+                    border-radius: 10px !important;
+                    color: black;
+                }
+                li:hover,
+                .ant-pagination-item-active {
+                    background-color: #7a6a56;
+                    border-color: #7a6a56;
+                }
+                li a:hover,
+                .ant-pagination-item-active a,
+                .ant-pagination-item:hover a {
+                    color: white;
+                }
+                button:hover:not([disabled]) {
+                    background-color: #7a6a56;
+                    border-color: #7a6a56;
+                    color: white !important;
+                    border-radius: 10px !important;
+                }
+            }
         }
-        .ant-pagination-item,
-        .ant-pagination-next,
-        .ant-pagination-prev {
-          height: 40px;
-          width: 40px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-weight: 700;
-          border-radius: 10px !important;
-          .ant-pagination-item-link {
-            border-radius: 10px !important;
-          }
-        }
-        .ant-pagination-item {
-          border: 1px solid #d6d6d6;
-        }
-        button:not([disabled]) {
-          border-radius: 10px !important;
-          color: black;
-        }
-        li:hover,
-        .ant-pagination-item-active {
-          background-color: #7a6a56;
-          border-color: #7a6a56;
-        }
-        li a:hover,
-        .ant-pagination-item-active a,
-        .ant-pagination-item:hover a {
-          color: white;
-        }
-        button:hover:not([disabled]) {
-          background-color: #7a6a56;
-          border-color: #7a6a56;
-          color: white !important;
-          border-radius: 10px !important;
-        }
-      }
     }
-  }
-
-  .skeletonCountStatus {
-    width: 160px;
-    height: 36px;
-    border-radius: 10px;
-  }
+    .skeletonCountStatus {
+        width: 160px;
+        height: 36px;
+        border-radius: 10px;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
-  .listOrder {
-    .table {
-      overflow: scroll;
-      .indexColumn,
-      .nameColumn,
-      .emailColumn,
-      .phoneColumn,
-      .statusColumn,
-      .handleColumn {
-        white-space: nowrap;
-      }
+    .listOrder {
+        .table {
+            overflow: scroll;
+            .indexColumn,
+            .nameColumn,
+            .emailColumn,
+            .phoneColumn,
+            .statusColumn,
+            .handleColumn {
+                white-space: nowrap;
+            }
+        }
     }
-  }
 }
 
 @media only screen and (max-width: 767px) {
-  .listUpgradeShopRequest {
-    margin: 0;
-    .title {
-      padding: 10px 15px 0px 15px;
-      h2 {
-        margin-bottom: 24px;
-      }
-    }
-    .colFilter {
-      .formFillter {
-        flex-direction: column;
-        .colFilterDate {
-          margin: 10px 0 10px 0;
-          .dateStart {
-            margin-left: 0px;
-          }
+    .listUpgradeShopRequest {
+        margin: 0;
+        .title {
+            padding: 10px 15px 0px 15px;
+            h2 {
+                margin-bottom: 24px;
+            }
         }
-      }
+        .colFilter {
+            .formFillter {
+                flex-direction: column;
+                .colFilterDate {
+                    margin: 10px 0 10px 0;
+                    .dateStart {
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+        .table {
+            padding: 10px 15px 10px 15px;
+            overflow: scroll;
+        }
+        .colPagination {
+            padding: 20px 15px 20px 15px;
+            align-items: normal;
+            flex-direction: column;
+            .pagination {
+                margin: 30px 0;
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
-    .table {
-      padding: 10px 15px 10px 15px;
-      overflow: scroll;
-    }
-    .colPagination {
-      padding: 20px 15px 20px 15px;
-      align-items: normal;
-      flex-direction: column;
-      .pagination {
-        margin: 30px 0;
-        display: flex;
-        justify-content: center;
-      }
-    }
-  }
 }

@@ -145,6 +145,7 @@ declare interface IFilterListUpgradeShopRequest {
 declare interface IUpgradeShopRequestBasicDetail {
   id: number;
   store_id: number;
+  name: string;
   first_name: string;
   last_name: string;
   email: string;
@@ -153,50 +154,14 @@ declare interface IUpgradeShopRequestBasicDetail {
 }
 
 declare interface IUpgradeShopRequestDetail {
-  id: number;
   store_id: number;
-  company: string;
   store_name: string;
-  postal_code: string;
-  province: {
-    id: number;
-    name: string;
-  };
-  city: string;
-  place: string;
-  address: string;
-  fax: string | null;
-  phone: string;
-  description: string;
-  customer_id: number;
-  person_stripe_id: number | null;
-  first_name: string;
-  last_name: string;
-  first_name_furigana: string;
-  last_name_furigana: string;
-  gender: number;
-  birthday: string;
-  position: string;
-  image_type: number;
-  image_card_first: string;
-  image_card_second: string;
   store_address: string;
-  store_city: string;
-  store_id: number;
-  store_name: string;
-  store_phone: string;
-  store_place: string;
-  store_postal_code: string;
-  store_province: string;
-  status: number;
-  link: string;
+  description: string;
   customer_email: string;
-  bank_customer_name: string;
-  bank_name: string;
-  bank_number: string;
-  bank_type: number;
-  birthday: string;
-  branch_name: string;
+  customer_phone: string;
+  customer_name: string;
+  status: number;
 }
 
 declare interface IListUpgradeShopRequestResponseData {
@@ -225,8 +190,7 @@ declare interface IDataColumnTableUpgradeShopRequest {
 }
 
 declare interface IApproveUpgradeShopRequestParams {
-  email: string;
-  store_id?: number;
+  store_id: number;
 }
 
 declare interface ISelect {

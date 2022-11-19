@@ -100,7 +100,7 @@ export default function ListUpgradeShopRequest() {
     return dataListUpgradeShopRequest?.data?.map((request: IUpgradeShopRequestBasicDetail, index: number) => ({
       key: index + 1 + (filter.page - 1) * PAGE_PAGINATION_10,
       id: index + 1 + (filter.page - 1) * PAGE_PAGINATION_10,
-      name: request.first_name + ' ' + request.last_name,
+      name: request.name,
       email: request.email,
       phone: request.phone,
       statusBtn: (
@@ -109,7 +109,7 @@ export default function ListUpgradeShopRequest() {
         </Button>
       ),
       handle: (
-        <Link to={'/upgrade-shop-requests/detail/' + request.id} state={filter}>
+        <Link to={'/upgrade-shop-requests/detail/' + request.store_id} state={filter}>
           <img height={24} width={24} src={handleView} alt="View" />
         </Link>
       ),

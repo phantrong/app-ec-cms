@@ -2,7 +2,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Col, message, Pagination, Row, Table } from 'antd';
 import moment from 'moment';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import dayjs from 'dayjs';
 import { Helmet } from 'react-helmet-async';
 
@@ -15,12 +15,12 @@ import { formatCurrencyNumber } from 'helper';
 import styles from './styles.module.scss';
 import stylesTable from 'styles/table.module.scss';
 import stylesDatePicker from 'styles/datePicker.module.scss';
-import iconMsg from 'assets/images/icons/icon-messages.svg';
-import iconEye from 'assets/images/icons/icon-eye.svg';
+// import iconMsg from 'assets/images/icons/icon-messages.svg';
+// import iconEye from 'assets/images/icons/icon-eye.svg';
 
 const StoreManagement = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const location = useLocation();
 
   const initialState: IFilterListUsers = {
@@ -70,23 +70,23 @@ const StoreManagement = () => {
       title: t('C3004StoreManagement.revenue'),
       render: (value: IStoreData) => <div>¥{formatCurrencyNumber(value.revenue_store)}</div>,
     },
-    {
-      render: (value: IStoreData) => (
-        <div className={styles.iconRow}>
-          <img src={iconMsg} alt="msg" onClick={() => navigate(`/store-management/chat-messenger/${value.id}`)} />
-          <img
-            src={iconEye}
-            alt="eye"
-            onClick={() =>
-              navigate(`/store-management/${value.id}`, {
-                state: filter.page,
-              })
-            }
-          />
-        </div>
-      ),
-      className: styles.iconGroup,
-    },
+    // {
+    //   render: (value: IStoreData) => (
+    //     <div className={styles.iconRow}>
+    //       <img src={iconMsg} alt="msg" onClick={() => navigate(`/store-management/chat-messenger/${value.id}`)} />
+    //       <img
+    //         src={iconEye}
+    //         alt="eye"
+    //         onClick={() =>
+    //           navigate(`/store-management/${value.id}`, {
+    //             state: filter.page,
+    //           })
+    //         }
+    //       />
+    //     </div>
+    //   ),
+    //   className: styles.iconGroup,
+    // },
   ];
 
   // Filter
