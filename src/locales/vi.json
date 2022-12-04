@@ -62,7 +62,7 @@
    "login":"APP EC ｜ Đăng nhập",
    "listCategory":"APP EC ｜ Quản lý danh mục",
    "listBrand":"APP EC ｜ Sửa đổi danh mục",
-   "listUpgradeShopRequest":"APP EC ｜ Yêu cầu nâng cấp",
+   "upgradeShopRequestDetail":"APP EC ｜ Yêu cầu đăng kí cửa hàng",
    "liftShopRequestDetail":"APP EC ｜ Chi tiết biểu mẫu nâng cấp",
    "listProduct":"APP EC ｜ Quản lý sản phẩm",
    "payoutHistory":"APP EC ｜ Quản lý thanh toán",
@@ -91,7 +91,7 @@
    "title":"đăng nhập",
    "email":"email",
    "password":"mật khẩu",
-   "forgetPassword":"Nhấp vào đây để biết cách quên mật khẩu của bạn",
+   "forgotPassword":"Quên mật khẩu ?",
    "textSignUp":"Để đăng ký thành viên mới",
    "here":"đây",
    "validate": {
@@ -289,20 +289,20 @@
    "title":"Quản lý Bán hàng",
    "earning":"Bán hàng",
    "startTimeBiggerThanEndTime":"* Kiểm tra xem ngày hoàn thành có sau ngày bắt đầu hay không.",
-   "period":"kỳ",
-   "numberOfPurchase":"số lần mua (number)",
+   "period":"Giai đoạn",
+   "numberOfPurchase":"số lần mua",
    "male":"nam",
    "female":"phụ nữ",
    "unknown":"chưa biết (thành viên)",
    "unknownNonMember":"không xác định (không phải thành viên)",
-   "totalPurchase":"Tổng tiền mua ( yên )",
-   "purchaseAverage":"Trung bình Mua ( Yên )",
+   "totalPurchase":"Tổng tiền mua (VNĐ)",
+   "purchaseAverage":"Trung bình Mua (VNĐ)",
    "staticsByAge":"Theo độ tuổi",
    "age":"tuổi",
    "staticsByProduct":"tổng hợp theo sản phẩm",
    "productName":"tên sản phẩm",
-   "numberPieces":"số lượng (miếng)",
-   "amountYen":"số tiền (yên)",
+   "quantityPieces":"số lượng",
+   "amountYen":"số tiền (VNĐ)",
    "selectMonthValid":"* Kiểm tra xem tháng hoàn thành có sau tháng bắt đầu hay không.",
    "selectYearValid":"* Kiểm tra xem năm hoàn thành có sau năm bắt đầu hay không.",
    "over30days":"* Vui lòng chọn 30 ngày trở xuống từ ngày bắt đầu đến ngày hoàn thành .",
@@ -311,7 +311,7 @@
    "fileNameExcelAge":"Tổng số theo độ tuổi",
    "amount":"số tiền",
    "totalPurchaseTooltip":"Tổng số lần mua",
-   "totalOrders":"Số lần mua (số)"
+   "totalOrders":"Số lần mua"
   },
  "C2010UserManagement": {
    "title":"Quản lý người dùng",
@@ -522,7 +522,7 @@
    "notCheckPrivacyPolicy":"* Vui lòng xác nhận và nhấp vào hộp kiểm",
    "emailRequired":"* Vui lòng nhập địa chỉ email của bạn."
   },
- "forgetPassword": {
+ "forgotPassword": {
    "titleHeader":"Quên mật khẩu",
    "emailLabel":"địa chỉ email đăng nhập",
    "btnNext":"Tiếp theo",
