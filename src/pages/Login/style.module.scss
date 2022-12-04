@@ -7,6 +7,11 @@
     background-image: url('../../assets/images/background-login.svg');
     background-repeat: no-repeat;
     background-size: 100%;
+    .textLogo {
+        color: #7A6A56;
+        font-size: 40px;
+        font-weight: 900;
+    }
     .logo {
         text-align: center;
         padding: 4%;
@@ -103,7 +108,7 @@
      :global(.ant-form-item-label>label) {
         color: #3B3B3B;
     }
-     :global(.ant-form-item-label > label::after) {
+     :global(.ant-form-item-label>label::after) {
         margin: 0;
     }
 }

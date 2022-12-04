@@ -10,8 +10,6 @@ import useProfile from 'hooks/useProfile';
 // import useToggleSideNav from 'hooks/useToggleSideNav';
 import { TOKEN_CMS } from 'constants/constants';
 // import CommonURLImage from 'components/CommonURLImage';
-
-import logoHeader from 'assets/images/logo-top.svg';
 import logoutImg from 'assets/images/icons/logout.svg';
 import dropdownIcon from 'assets/images/icons/icon-arrow-bottom.svg';
 // import avatarIcon from 'assets/images/icons/avatar.svg';
@@ -90,7 +88,8 @@ export default function PageHeader() {
     <div className={styles.headerWrapper}>
       <div className={styles.menuWrapper}>
         <div className={styles.logoHeader}>
-          <img src={logoHeader} alt="logo top" />
+          MY CART
+          {/* <img src={logoHeader} alt="logo top" /> */}
         </div>
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']} className={styles.menuContent}>
           {/* {routes.map((route) => (

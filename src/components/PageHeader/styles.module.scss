@@ -1,140 +1,143 @@
 .headerWrapper {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 65px;
-  color: #fff;
-  position: fixed;
-  top: 0;
-  z-index: 9999;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
 }
 
 .menuDropDown {
-  min-width: 200px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+    min-width: 200px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
 .menuOption {
-  display: flex;
-  :global(.ant-dropdown-menu-title-content) {
     display: flex;
-    align-items: center;
-    .iconMenu {
-      width: 30px;
-      display: flex;
-      justify-content: center;
-      .avatar {
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-      }
+     :global(.ant-dropdown-menu-title-content) {
+        display: flex;
+        align-items: center;
+        .iconMenu {
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            .avatar {
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
-  }
 }
 
 .menuWrapper {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: white;
-  box-shadow: inset 0px -0.5px 0px #d6d6d6;
-  height: 65px;
-  :global {
-    .ant-menu-item {
-      color: #fff;
-      background-color: #000;
-      a {
-        font-size: 16px;
-        color: #fff;
-      }
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: white;
+    box-shadow: inset 0px -0.5px 0px #d6d6d6;
+    height: 65px;
+     :global {
+        .ant-menu-item {
+            color: #fff;
+            background-color: #000;
+            a {
+                font-size: 16px;
+                color: #fff;
+            }
+        }
+        .ant-menu-item-selected,
+        .ant-menu-item-active {
+            background-color: #000 !important;
+            a {
+                color: #a03bba;
+            }
+        }
     }
-    .ant-menu-item-selected,
-    .ant-menu-item-active {
-      background-color: #000 !important;
-      a {
-        color: #a03bba;
-      }
+    .menuItem {
+        padding: 10px;
+        position: relative;
+        cursor: pointer;
+        .badge {
+            position: absolute;
+            top: 8px;
+            right: 4px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            background-origin: padding-box;
+            color: #fff;
+            min-width: 14px;
+            height: 14px;
+            background-color: #eb5757;
+            border-radius: 50%;
+        }
+        .icon {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+        }
+        .dropdownToggle {
+            padding: 2px 11px 2px 2px;
+            min-width: 160px;
+            color: #3b3b3b;
+            background: #efefef;
+            border-radius: 150px;
+            display: flex;
+            align-items: center;
+            min-height: 44px;
+            justify-content: space-between;
+            .userName {
+                margin-left: 10px;
+                font-weight: bold;
+            }
+        }
+        .iconDropdown {
+            margin-left: 10px;
+        }
     }
-  }
-  .menuItem {
-    padding: 10px;
-    position: relative;
-    cursor: pointer;
-    .badge {
-      position: absolute;
-      top: 8px;
-      right: 4px;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 10px;
-      background-origin: padding-box;
-      color: #fff;
-      min-width: 14px;
-      height: 14px;
-      background-color: #eb5757;
-      border-radius: 50%;
-    }
-    .icon {
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-    }
-    .dropdownToggle {
-      padding: 2px 11px 2px 2px;
-      min-width: 160px;
-      color: #3b3b3b;
-      background: #efefef;
-      border-radius: 150px;
-      display: flex;
-      align-items: center;
-      min-height: 44px;
-      justify-content: space-between;
-      .userName {
-        margin-left: 10px;
-        font-weight: bold;
-      }
-    }
-    .iconDropdown {
-      margin-left: 10px;
-    }
-  }
 }
 
 .toggleSideBarButton {
-  transform: translateX(5px);
-  z-index: 1;
+    transform: translateX(5px);
+    z-index: 1;
 }
 
 .logoHeader {
-  padding-left: 20px;
+    padding-left: 20px;
+    color: #7A6A56;
+    font-size: 40px;
+    font-weight: 900;
 }
 
 .menuContent {
-  margin-right: auto;
-  padding-left: 10px;
+    margin-right: auto;
+    padding-left: 10px;
 }
 
 .isCollapsed {
-  transform: translateX(405px);
-  transition: all 0.3s;
+    transform: translateX(405px);
+    transition: all 0.3s;
 }
 
 @media only screen and (max-width: 992px) {
-  .isCollapsed {
-    transform: translateX(305px);
-  }
+    .isCollapsed {
+        transform: translateX(305px);
+    }
 }
 
 .loadingProfileHeader {
-  :global {
-    .ant-skeleton-button {
-      width: auto;
-      min-width: 160px;
-      border-radius: 30px;
-      height: 44px;
+     :global {
+        .ant-skeleton-button {
+            width: auto;
+            min-width: 160px;
+            border-radius: 30px;
+            height: 44px;
+        }
     }
-  }
 }

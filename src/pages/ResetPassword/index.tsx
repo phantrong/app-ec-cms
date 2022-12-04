@@ -13,8 +13,6 @@ import { MAX_LENGTH_PASSWORD, MIN_LENGTH_PASSWORD, PASSWORD_REGEX } from 'consta
 import { resetPassword, validateLinkResetPassword } from 'api/authentication';
 import { handleErrorMessage } from 'helper';
 
-import logo from '../../assets/images/logo.svg';
-
 const dataFormDefault: IPasswordParams = {
   password: '',
   password_confirm: '',
@@ -92,7 +90,7 @@ export default function ResetPassword() {
         <Card bordered={false} className={styles.resetPasswordForm}>
           <Row className={styles.logo} justify="center">
             <Link to="/login">
-              <img height={106} width={72} src={logo} alt="Logo" />
+              <div className={styles.textLogo}>MY CART</div>
             </Link>
           </Row>
           {!isSuccess && (

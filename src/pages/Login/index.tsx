@@ -13,8 +13,6 @@ import styles from './style.module.scss';
 import { login } from 'api/authentication';
 import { TOKEN_CMS, STATUS_CODE } from 'constants/constants';
 
-import logo from '../../assets/images/logo.svg';
-
 export default function Login() {
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -64,7 +62,7 @@ export default function Login() {
       <Card bordered={false} className={styles.loginForm}>
         <Row className={styles.logo} justify="center">
           <Link to="/">
-            <img height={106} width={72} src={logo} alt="Logo" />
+            <div className={styles.textLogo}>MY CART</div>
           </Link>
         </Row>
         <Form onFinish={handleSubmit} hideRequiredMark>

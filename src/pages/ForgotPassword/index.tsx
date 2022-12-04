@@ -13,8 +13,6 @@ import { forgotPassword, resendForgotPassword } from 'api/authentication';
 import { EMAIL_REGEX, TYPE_CHECK_MAIL_RESET_PASSWORD } from 'constants/constants';
 import { handleErrorMessage } from 'helper';
 
-import logo from '../../assets/images/logo.svg';
-
 export default function ForgotPassword() {
   const { t } = useTranslation();
   const [form]: FormInstance<any>[] = Form.useForm();
@@ -89,7 +87,7 @@ export default function ForgotPassword() {
       <Card bordered={false} className={styles.forgotPasswordForm}>
         <Row className={styles.logo} justify="center">
           <Link to="/login">
-            <img height={106} width={72} src={logo} alt="Logo" />
+            <div className={styles.textLogo}>MY CART</div>
           </Link>
         </Row>
         {!isVerifiedEmail && (
