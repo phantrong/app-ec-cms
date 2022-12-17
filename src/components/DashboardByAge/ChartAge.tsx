@@ -71,7 +71,7 @@ export default function ChartAge(props: IDashboardByAge) {
       y: {
         ticks: {
           callback(value: string) {
-            return formatCurrencyNumber(value)  + ' VNĐ';
+            return formatCurrencyNumber(value) + ' VNĐ';
           },
         },
         beginAtZero: true,

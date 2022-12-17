@@ -66,7 +66,7 @@ export default function ChartBestSales(props: IDashboardByBestSales) {
             return '#3B3B3B';
           },
           label(context: any) {
-            return context.formattedValue  + ' VNĐ';
+            return context.formattedValue + ' VNĐ';
           },
         },
       },
