@@ -124,7 +124,7 @@ const ListOrders = () => {
     {
       title: t('C2005ListOrders.total'),
       render: (value: IListOrders, item: IListOrders, index: number) => (
-        <div>¥{formatCurrencyNumber(value.total_payment)}</div>
+        <div>{formatCurrencyNumber(value.total_payment)} VNĐ</div>
       ),
     },
     {
@@ -286,7 +286,7 @@ const ListOrders = () => {
                     <img src={iconTotalIncome} alt="total live" />
                   </div>
                   <div className={classNames(styles.currency, styles.currencyStore)}>
-                    ¥{formatCurrencyNumber(listOrders?.total_payment)}
+                    {formatCurrencyNumber(listOrders?.total_payment)} VNĐ
                   </div>
                 </div>
               </Col>
@@ -298,7 +298,7 @@ const ListOrders = () => {
                     <img src={iconCommission} alt="total live" />
                   </div>
                   <div className={classNames(styles.currency, styles.currencyCommission)}>
-                    ¥{formatCurrencyNumber(listOrders?.revenue_admin)}
+                    {formatCurrencyNumber(listOrders?.revenue_admin)} VNĐ
                   </div>
                 </div>
               </Col>

@@ -235,7 +235,7 @@ const ProductManagement = () => {
           </div>
 
           {/* Status */}
-          <div className={styles.selectWrapper}>
+          {/* <div className={styles.selectWrapper}>
             <div className={styles.selectTitle}>{t('common.status')}</div>
 
             {isLoadingListProduct ? (
@@ -248,7 +248,7 @@ const ProductManagement = () => {
                 defaultValue={filter.status || null}
               />
             )}
-          </div>
+          </div> */}
 
           {/* Price */}
           <div className={styles.price}>
@@ -257,7 +257,7 @@ const ProductManagement = () => {
               <div className={styles.priceInput}>
                 <InputNumber
                   setValue={handlePriceMin}
-                  textUnit={'¥'}
+                  textUnit={'VNĐ'}
                   placeholder={t('listProduct.searchProduct.lowestPrice')}
                   onSearch={handleSearchByPrice}
                 />
@@ -266,7 +266,7 @@ const ProductManagement = () => {
               <div className={styles.priceInput}>
                 <InputNumber
                   setValue={handlePriceMax}
-                  textUnit={'¥'}
+                  textUnit={'VNĐ'}
                   placeholder={t('listProduct.searchProduct.highestPrice')}
                   onSearch={handleSearchByPrice}
                 />

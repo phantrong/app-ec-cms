@@ -126,7 +126,7 @@ export default function ListOrder() {
           </Row>
         </Col>
         <Col span={3}>
-          <NumberFormat value={Number(item.price)} displayType="text" thousandSeparator={true} prefix="¥" />
+          <NumberFormat value={Number(item.price)} displayType="text" thousandSeparator={true} prefix="VNĐ" />
         </Col>
         <Col
           span={3}
@@ -142,7 +142,7 @@ export default function ListOrder() {
               value={Number(item.price) * item.quantity}
               displayType="text"
               thousandSeparator={true}
-              prefix="¥"
+              prefix="VNĐ"
             />
           </strong>
         </Col>
@@ -267,7 +267,7 @@ export default function ListOrder() {
                         value={Number(orderDetail?.total_payment)}
                         displayType="text"
                         thousandSeparator={true}
-                        prefix="¥"
+                        prefix="VNĐ"
                       />
                     </strong>
                   </div>
@@ -282,7 +282,7 @@ export default function ListOrder() {
                         value={Number(orderDetail?.total_payment)}
                         displayType="text"
                         thousandSeparator={true}
-                        prefix="¥"
+                        prefix="VNĐ"
                       />
                     </strong>
                   </div>

@@ -67,7 +67,7 @@ export default function ChartOrder(props: IDashboardByOrder) {
             return '#3B3B3B';
           },
           label(context: any) {
-            return '  ¥' + context.formattedValue;
+            return context.formattedValue + ' VNĐ';
           },
         },
       },
@@ -84,7 +84,7 @@ export default function ChartOrder(props: IDashboardByOrder) {
       y: {
         ticks: {
           callback(value: string) {
-            return '¥' + formatCurrencyNumber(value);
+            return formatCurrencyNumber(value) + ' VNĐ';
           },
         },
         beginAtZero: true,

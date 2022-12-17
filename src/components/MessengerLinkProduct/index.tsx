@@ -33,7 +33,7 @@ const MessengerLinkProduct = (props: IMessengerLinkProductProps) => {
                 value={checkPriceDiscount(Number(productDetail?.max_price), Number(productDetail?.max_discount))}
                 displayType={'text'}
                 thousandSeparator={true}
-                prefix="¥"
+                prefix="VNĐ"
                 className={classNames({
                   [styles.crossPrice]: true,
                   [styles.paddingRight5px]:
@@ -45,7 +45,7 @@ const MessengerLinkProduct = (props: IMessengerLinkProductProps) => {
                 value={Number(productDetail?.max_discount)}
                 displayType={'text'}
                 thousandSeparator={true}
-                prefix="¥"
+                prefix="VNĐ"
                 className={styles.paymentPrice}
               />
             </div>

@@ -177,7 +177,7 @@ export default function ListUpgradeShopRequest() {
         <Col xs={24} sm={24} md={12} lg={12} xl={12}>
           <h2>{t('listUpgradeShopRequest.title')}</h2>
         </Col>
-        <Col xs={24} sm={24} md={12} lg={12} xl={12} className={styles.colFilter}>
+        {/* <Col xs={24} sm={24} md={12} lg={12} xl={12} className={styles.colFilter}>
           <Col xs={24} sm={24} md={8} lg={6} xl={6} className={styles.filter}>
             <span className={styles.titleFilter}>{t('listUpgradeShopRequest.filterStatus')}</span>
           </Col>
@@ -201,7 +201,7 @@ export default function ListUpgradeShopRequest() {
               </Select>
             )}
           </Col>
-        </Col>
+        </Col> */}
       </Row>
       {isLoadingDataListUpgradeShopRequest && <SpinLoading />}
       {!isLoadingDataListUpgradeShopRequest && (

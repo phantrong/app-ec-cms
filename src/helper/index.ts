@@ -29,7 +29,7 @@ export const handleErrorMessage = (error: any) => {
 };
 
 export const getErrorMessage = (error: any) => {
-  return error?.response?.data?.errorMessage || 'システムエラー';
+  return error?.response?.data?.errorMessage || 'Lỗi hệ thống';
 };
 
 export const trimSpaceInput = (value: string) => value.replace(/\s+/g, ' ').trim();

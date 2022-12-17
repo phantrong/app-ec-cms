@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import DashboardByOrder from 'components/DashboardByOrder';
 import DashBoardByBestSales from 'components/DashboardByBestSales';
-import DashBoardByAge from 'components/DashboardByAge';
+// import DashBoardByAge from 'components/DashboardByAge';
 
 import styles from './styles.module.scss';
 
@@ -19,7 +19,7 @@ const DashBoardTurnOver = () => {
       <div className={styles.titleTurnover}>{t('C2001DashBoard.turnover')}</div>
       <DashboardByOrder />
       <DashBoardByBestSales />
-      <DashBoardByAge />
+      {/* <DashBoardByAge /> */}
     </div>
   );
 };

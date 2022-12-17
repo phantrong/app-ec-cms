@@ -66,10 +66,10 @@ const StoreManagement = () => {
       title: t('C3004StoreManagement.createdAt'),
       render: (value: IStoreData) => moment(value.created_at).format('YYYY/MM/DD'),
     },
-    {
-      title: t('C3004StoreManagement.revenue'),
-      render: (value: IStoreData) => <div>¥{formatCurrencyNumber(value.revenue_store)}</div>,
-    },
+    // {
+    //   title: t('C3004StoreManagement.revenue'),
+    //   render: (value: IStoreData) => <div>{formatCurrencyNumber(value.revenue_store)} VNĐ</div>,
+    // },
     // {
     //   render: (value: IStoreData) => (
     //     <div className={styles.iconRow}>

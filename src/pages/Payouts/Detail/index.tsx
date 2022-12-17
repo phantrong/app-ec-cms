@@ -76,7 +76,7 @@ const Detail = () => {
                       </Col>
                       <Col span={12}></Col>
                       <Col span={12}>{t('payouts.tableHistory.quantity')}</Col>
-                      <Col span={12}>¥{formatCurrencyNumber(payoutDetail?.amount)}</Col>
+                      <Col span={12}>{formatCurrencyNumber(payoutDetail?.amount)} VNĐ</Col>
                       <Col span={12}>{t('payouts.tableHistory.arrivalDate')}</Col>
                       <Col span={12}>
                         {payoutDetail?.arrival_date ? moment.unix(payoutDetail.arrival_date).format('YYYY/MM/DD') : ''}
@@ -134,7 +134,7 @@ const Detail = () => {
                   <Col span={24}>{t('upgradeShopRequestDetail.shopForm.address')}</Col>
                   <Col span={24}>{storeDetail?.address_detail}</Col>
                   <Col span={24}>{t('payouts.detail.currentBalance')}</Col>
-                  <Col span={24}>¥{bankRetrieve?.total}</Col>
+                  <Col span={24}>{bankRetrieve?.total} VNĐ</Col>
                 </>
               )}
             </Row>

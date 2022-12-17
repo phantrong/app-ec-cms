@@ -66,7 +66,7 @@ export default function ChartBestSales(props: IDashboardByBestSales) {
             return '#3B3B3B';
           },
           label(context: any) {
-            return '  ¥' + context.formattedValue;
+            return context.formattedValue  + ' VNĐ';
           },
         },
       },
@@ -83,7 +83,7 @@ export default function ChartBestSales(props: IDashboardByBestSales) {
       y: {
         ticks: {
           callback(value: string) {
-            return '¥' + formatCurrencyNumber(value);
+            return formatCurrencyNumber(value) + ' VNĐ';
           },
         },
         beginAtZero: true,

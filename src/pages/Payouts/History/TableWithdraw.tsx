@@ -87,7 +87,7 @@ const TableWithdraw = ({ filter, onHandleChangePage }: { filter: IParamPaymentHi
                   <div className={`${styles.tableCell} ${styles.tableCellId}`}>{++index}</div>
                   <div className={styles.tableCell}>{data.store_name}</div>
                   <div className={styles.tableCell}>
-                    <div className={styles.money}>¥{formatCurrencyNumber(data.money)}</div>
+                    <div className={styles.money}>{formatCurrencyNumber(data.money)} VNĐ</div>
                   </div>
                   <div className={styles.tableCell}>{data.date}</div>
                   <div className={styles.tableCell}>

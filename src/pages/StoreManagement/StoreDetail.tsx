@@ -167,7 +167,7 @@ const StoreDetail = () => {
                       <img src={iconTotalIncome} alt="total income" />
                     </div>
                     <div className={classNames(styles.currency, styles.currencyStore)}>
-                      ¥{formatCurrencyNumber(userDetail?.revenue_total)}
+                      {formatCurrencyNumber(userDetail?.revenue_total)} VNĐ
                     </div>
                   </div>
                 </Col>
@@ -179,7 +179,7 @@ const StoreDetail = () => {
                       <img src={iconCommission} alt="commission" />
                     </div>
                     <div className={classNames(styles.currency, styles.currencyCommission)}>
-                      ¥{formatCurrencyNumber(Number(userDetail?.revenue_total) - Number(userDetail?.revenue_store))}
+                      {formatCurrencyNumber(Number(userDetail?.revenue_total) - Number(userDetail?.revenue_store))} VNĐ
                     </div>
                   </div>
                 </Col>
@@ -191,7 +191,7 @@ const StoreDetail = () => {
                       <img src={iconRealityIncome} alt="reality income" />
                     </div>
                     <div className={classNames(styles.currency, styles.currencyReality)}>
-                      ¥{formatCurrencyNumber(userDetail?.revenue_store)}
+                      {formatCurrencyNumber(userDetail?.revenue_store)} VNĐ
                     </div>
                   </div>
                 </Col>
